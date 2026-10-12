@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server';
 import { BedrockRuntimeClient, InvokeModelCommand } from '@aws-sdk/client-bedrock-runtime';
 
+export const dynamic = 'force-dynamic';
+
 // Use Claude 3.5 Haiku (active model on Bedrock)
 const EVAL_MODEL = 'au.anthropic.claude-haiku-4-5-20251001-v1:0';
 

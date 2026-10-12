@@ -5,9 +5,14 @@ import { PrismaClient } from '@prisma/client';
 const globalForPrisma = globalThis;
 
 if (!globalForPrisma.prisma) {
-  const pool = new Pool({ connectionString: process.env.DATABASE_URL });
-  const adapter = new PrismaPg(pool);
-  globalForPrisma.prisma = new PrismaClient({ adapter });
+  const connectionString = process.env.DATABASE_URL;
+  if (connectionString) {
+    const pool = new Pool({ connectionString });
+    const adapter = new PrismaPg(pool);
+    globalForPrisma.prisma = new PrismaClient({ adapter });
+  } else {
+    globalForPrisma.prisma = new PrismaClient();
+  }
 }
 
 export const prisma = globalForPrisma.prisma;
