@@ -41,6 +41,8 @@ async function callLLM(prompt) {
   let resultText = data.content?.[0]?.text || '';
   // Strip <think> blocks just in case
   resultText = resultText.replace(/<think>[\s\S]*?<\/think>/gi, '').trim();
+  // Strip [DEBUG] lines if any are present
+  resultText = resultText.replace(/\[DEBUG\][\s\S]*$/gi, '').trim();
 
   return {
     text: resultText,
@@ -543,8 +545,7 @@ Do NOT point out missing visual elements or other blocks.
 
 Output Instructions:
 1. Return ONLY the raw feedback text. Do NOT use JSON, markdown formatting, or <think> blocks.
-2. Keep feedback concise: at most 50 words, addressing the student directly.
-3. At the very end of your response, on a new line, append: [DEBUG] Path: SUCCESS_PARTIAL`;
+2. Keep feedback concise: at most 50 words, addressing the student directly.`;
   }
 
   if (coreFocusCaptured) {
@@ -564,8 +565,7 @@ Make it feel personalized and conversational. Do NOT ask any follow-up questions
 
 Output Instructions:
 1. Return ONLY the raw feedback text. Do NOT use JSON, markdown formatting, or <think> blocks.
-2. Keep feedback concise: at most 50 words, addressing the student directly.
-3. At the very end of your response, on a new line, append: [DEBUG] Path: SUCCESS`;
+2. Keep feedback concise: at most 50 words, addressing the student directly.`;
   }
 
   return `You are a teaching assistant writing feedback on a student's interpretation of a technical sketch.
@@ -586,8 +586,7 @@ The student missed the block marked (CORE FOCUS). Your feedback MUST target this
 
 Do NOT name any rubric level, classification scheme, or analysis structure.
 
-${BASE_OUTPUT_INSTRUCTIONS}
-4. At the very end of your response, on a new line, append: [DEBUG] Scaffolding Target: <Name of the block you are scaffolding, e.g. Result> | Path: GAP_FINDING (You are permitted to output the block name for this debug line only)`;
+${BASE_OUTPUT_INSTRUCTIONS}`;
 }
 
 // --- Informed Rubric (extraction-informed, rubric-calibrated) ---
@@ -629,8 +628,7 @@ Do NOT mention the level number, rubric, or classification. Do NOT point out mis
 
 Output Instructions:
 1. Return ONLY the raw feedback text. Do NOT use JSON, markdown formatting, or <think> blocks.
-2. Keep feedback concise: at most 50 words, addressing the student directly.
-3. At the very end of your response, on a new line, append: [DEBUG] Path: SUCCESS_PARTIAL`;
+2. Keep feedback concise: at most 50 words, addressing the student directly.`;
   }
 
   if (coreFocusCaptured) {
@@ -652,8 +650,7 @@ Do NOT point out missing elements from the sketch itself — your question shoul
 
 Output Instructions:
 1. Return ONLY the raw feedback text. Do NOT use JSON, markdown formatting, or <think> blocks.
-2. Keep feedback concise: at most 50 words, addressing the student directly.
-3. At the very end of your response, on a new line, append: [DEBUG] Path: SUCCESS`;
+2. Keep feedback concise: at most 50 words, addressing the student directly.`;
   }
 
   return `You are a teaching assistant writing feedback on a student's interpretation of a technical sketch, using a structured rubric to calibrate your response.
@@ -680,8 +677,7 @@ The ground truth is your private reference — do NOT simply give answer to the 
 
 The student missed the block marked (CORE FOCUS). Your feedback MUST target this specific core concept. Ask a targeted question or suggest a line of thinking that guides the student to understand the CORE FOCUS. Before correcting a misconception, check if the student's underlying logic is sound but they simply misread a visual element (e.g., they reversed a direction or misread a label). If their logic is internally consistent, affirm their reasoning and only redirect how they read that specific visual element. Do NOT focus on other missed secondary concepts — direct all your scaffolding toward the CORE FOCUS. Do not tell them to list visual elements. If they have misconceptions (see unmatched claims), address the most significant one. Do not state what they would find — let them reason toward it.
 
-${BASE_OUTPUT_INSTRUCTIONS}
-4. At the very end of your response, on a new line, append: [DEBUG] Scaffolding Target: <Name of the block you are scaffolding, e.g. Result> | Path: GAP_FINDING (You are permitted to output the block name for this debug line only)`;
+${BASE_OUTPUT_INSTRUCTIONS}`;
 }
 
 // ============================================================
