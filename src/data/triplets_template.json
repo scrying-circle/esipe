@@ -1,0 +1,436 @@
+[
+  {
+    "id": "projection",
+    "key_idea": "Shows the projection of a cube onto the y-z plane",
+    "blocks": [
+      {
+        "name": "Setup",
+        "description": "The initial spatial context, including the object and coordinate system.",
+        "elements": [
+          {
+            "element": "cube",
+            "current_role": "original object to be projected",
+            "enriched_role": "The 3D object being transformed; it is aligned with the coordinate axes."
+          },
+          {
+            "element": "set of 3D axes",
+            "current_role": "provides orientation context",
+            "enriched_role": "Establish the 3D coordinate system (x, y, z) and orientation in space."
+          }
+        ],
+        "refinements": []
+      },
+      {
+        "name": "Mechanism",
+        "description": "A projection operation that maps the cube onto the yz-plane.",
+        "elements": [
+          {
+            "element": "three arrows",
+            "current_role": "indicate projection mapping",
+            "enriched_role": "Arrows map vertices on cube to vertices onto the projected shape, emphasising the operation is vertex by vertex and not the cube as a whole, and therefore is likely a projection rather than, say, a translation. The projection is orthogonal."
+          }
+        ],
+        "is_core_focus": true,
+        "refinements": [
+          "The projection is orthogonal (projection lines are perpendicular to the yz-plane, i.e. parallel to the x-axis), so the x-dimension is simply dropped."
+        ]
+      },
+      {
+        "name": "Result",
+        "description": "The result of the projection of the cube is a square on the yz-plane.",
+        "elements": [
+          {
+            "element": "shaded square on the y-z plane",
+            "current_role": "the resultant shape of the projection",
+            "enriched_role": "The result of the projection, it is placed on the yz-plane and occupies the same yz coordinates as the cube."
+          }
+        ],
+        "refinements": []
+      }
+    ]
+  },
+  {
+    "id": "cube-folding",
+    "key_idea": "Demonstrates the folding of a cube net, using two labels to keep track of its orientation",
+    "blocks": [
+      {
+        "name": "Setup",
+        "description": "The flat template and reference markers before any transformation.",
+        "elements": [
+          {
+            "element": "cube net",
+            "current_role": "unfolded shape",
+            "enriched_role": "The 2D cross/t-shaped arrangement of 6 connected square faces representing an unfolded cube."
+          },
+          {
+            "element": "square label",
+            "current_role": "reference marker",
+            "enriched_role": "A distinct square marker placed on one face to track spatial position during folding."
+          },
+          {
+            "element": "arrow label",
+            "current_role": "reference marker with left-right orientation",
+            "enriched_role": "An oriented marker that tracks both spatial position and directional orientation (facing/rotation) across the transformation."
+          }
+        ],
+        "refinements": []
+      },
+      {
+        "name": "Mechanism",
+        "description": "The transformation connecting the flat and assembled forms.",
+        "elements": [
+          {
+            "element": "arrow from net to folded cube",
+            "current_role": "indicates the folding transformation",
+            "enriched_role": "Represents the dynamic process of folding 2D faces along edges into a 3D box shape."
+          }
+        ],
+        "refinements": []
+      },
+      {
+        "name": "Result",
+        "description": "The assembled 3D form showing where the reference markers end up.",
+        "elements": [
+          {
+            "element": "folded cube",
+            "current_role": "depiction of the net after folding, with the labels tracking the orientation of the cube",
+            "enriched_role": "The assembled 3D cube showing the final relative positions and orientations of the square and arrow reference markers."
+          }
+        ],
+        "is_core_focus": true,
+        "refinements": []
+      }
+    ]
+  },
+  {
+    "id": "ray-circle-intersection",
+    "key_idea": "Rays can intersect a circle at zero, one, or two points.",
+    "blocks": [
+      {
+        "name": "Setup",
+        "description": "The geometric primitives involved in the intersection test.",
+        "elements": [
+          {
+            "element": "three rays",
+            "current_role": "cases 1 through 3",
+            "enriched_role": "Three linear trajectory paths representing test rays at varying distances from the circle center."
+          },
+          {
+            "element": "circle",
+            "current_role": "target geometry",
+            "enriched_role": "The 2D circular boundary being tested for ray intersection."
+          }
+        ],
+        "refinements": []
+      },
+      {
+        "name": "Mechanism",
+        "description": "The spatial relationship between the line and the curved boundary.",
+        "elements": [
+          {
+            "element": "ray intersection",
+            "current_role": "rays traversing through the circle",
+            "enriched_role": "The geometric traversal of rays relative to the circle (outside/miss, tangent/touch, secant/penetrate)."
+          }
+        ],
+        "refinements": []
+      },
+      {
+        "name": "Result",
+        "description": "The points where contact occurs, varying by case.",
+        "elements": [
+          {
+            "element": "highlighted intersection points",
+            "current_role": "0, 1, or 2 points depending on the case",
+            "enriched_role": "The discrete contact count (0 points for miss, 1 point for tangent, 2 points for secant) highlighting intersection count variation."
+          }
+        ],
+        "is_core_focus": true,
+        "refinements": []
+      }
+    ]
+  },
+  {
+    "id": "zoom",
+    "key_idea": "The effect of moving the observer away from the view plane is that the field/angle of view narrows or, put differently, the scene becomes more zoomed in",
+    "blocks": [
+      {
+        "name": "Setup",
+        "description": "The scene and the fixed constraint through which it is viewed.",
+        "elements": [
+          {
+            "element": "tree",
+            "current_role": "object being viewed",
+            "enriched_role": "A generic 3D target scene object positioned at a fixed location."
+          },
+          {
+            "element": "view plane",
+            "current_role": "limits the vision",
+            "enriched_role": "A fixed rectangular aperture/window defining the spatial framing constraint."
+          }
+        ],
+        "refinements": []
+      },
+      {
+        "name": "Mechanism",
+        "description": "The change in observer position relative to the viewing constraint.",
+        "elements": [
+          {
+            "element": "moving observer",
+            "current_role": "depicts the observer moving away from the view plane, from an initial to secondary position",
+            "enriched_role": "The backward displacement of the camera/viewpoint relative to the static view plane."
+          },
+          {
+            "element": "arrow",
+            "current_role": "movement",
+            "enriched_role": "Indicates direction of viewpoint translation (moving further away)."
+          },
+          {
+            "element": "view cones",
+            "current_role": "shows the view of the observer through the view plane from each of the initial and secondary positions",
+            "enriched_role": "Frustum rays passing from observer through view plane boundaries onto the scene."
+          }
+        ],
+        "refinements": []
+      },
+      {
+        "name": "Result",
+        "description": "The observable change in how much of the scene is visible.",
+        "elements": [
+          {
+            "element": "narrower view angle",
+            "current_role": "field of view narrows",
+            "enriched_role": "The reduced angular field of view resulting in a zoomed-in perspective of the target object."
+          }
+        ],
+        "is_core_focus": true,
+        "refinements": []
+      }
+    ]
+  },
+  {
+    "id": "shadow",
+    "key_idea": "a shadow ray from a point not in shadow to the light source does not intersect any objects, while one from a point in shadow does intersect an object",
+    "blocks": [
+      {
+        "name": "Setup",
+        "description": "The light source, occluding object, and test points in the scene.",
+        "elements": [
+          {
+            "element": "light source",
+            "current_role": "casts shadow",
+            "enriched_role": "Point light emitting illumination rays across the scene."
+          },
+          {
+            "element": "circle",
+            "current_role": "occluder",
+            "enriched_role": "Opaque obstacle obstructing light ray paths."
+          },
+          {
+            "element": "points p1 and p2",
+            "current_role": "test points",
+            "enriched_role": "Surface sample positions evaluated for light visibility."
+          }
+        ],
+        "refinements": []
+      },
+      {
+        "name": "Mechanism",
+        "description": "Tracing paths from each test point toward the light source to check for obstruction.",
+        "elements": [
+          {
+            "element": "cast shadow rays",
+            "current_role": "rays from p1/p2 to light source and check if intersection with circle",
+            "enriched_role": "Raycasting straight lines from surface points back to light source position to query ray-geometry intersection."
+          }
+        ],
+        "refinements": []
+      },
+      {
+        "name": "Result",
+        "description": "Whether each path is blocked determines if the point is in shadow.",
+        "elements": [
+          {
+            "element": "shadow-ray circle intersection point",
+            "current_role": "if the shadow-ray intersects the circle/an obstacle, the point casting that ray is in shadow. Otherwise, it is not",
+            "enriched_role": "Existence of an intersection hit along p2's shadow ray flags p2 as occluded/shadowed, whereas p1's unobstructed ray leaves p1 illuminated."
+          }
+        ],
+        "is_core_focus": true,
+        "refinements": []
+      }
+    ]
+  },
+  {
+    "id": "planar distance",
+    "key_idea": "the distance from a point to a plane can be computed by finding the magnitude of the projection of the vector from the origin to the point onto the plane's normal, and comparing it with the distance of the plane to the origin along that normal",
+    "blocks": [
+      {
+        "name": "Setup",
+        "description": "The geometric primitives: the plane, the point, and the reference direction.",
+        "elements": [
+          {
+            "element": "plane",
+            "current_role": "flat plane",
+            "enriched_role": "Target 3D plane specified in implicit or point-normal form."
+          },
+          {
+            "element": "point p",
+            "current_role": "target point",
+            "enriched_role": "Arbitrary 3D point location to measure distance from plane."
+          },
+          {
+            "element": "normal n",
+            "current_role": "plane normal vector",
+            "enriched_role": "Perpendicular unit vector defining the plane's orientation axis."
+          }
+        ],
+        "refinements": []
+      },
+      {
+        "name": "Mechanism",
+        "description": "Using the reference direction to decompose the point's position and compute a perpendicular measurement.",
+        "elements": [
+          {
+            "element": "projection",
+            "current_role": "projecting origin-to-p vector onto normal vector",
+            "enriched_role": "Dot product projection of point vector onto normal n to measure scalar distance along normal direction."
+          },
+          {
+            "element": "orthogonal distance from origin to p",
+            "current_role": "can compare/subtract the lengths of this vector with/from the projection vector to obtain the result d",
+            "enriched_role": "Comparing projected point distance against plane offset distance d' along normal n to isolate point-to-plane distance d."
+          }
+        ],
+        "is_core_focus": true,
+        "refinements": []
+      },
+      {
+        "name": "Result",
+        "description": "The computed perpendicular distance from the point to the plane.",
+        "elements": [
+          {
+            "element": "distance d",
+            "current_role": "calculated perpendicular distance",
+            "enriched_role": "The resultant perpendicular offset d between point p and the plane surface."
+          }
+        ],
+        "refinements": []
+      }
+    ]
+  },
+  {
+    "id": "csg",
+    "key_idea": "in a ray intersecting the csg object, the ray intersects the box before it leaves the circle, and in a ray not intersecting the csg object, the ray leaves the circle before entering the box",
+    "blocks": [
+      {
+        "name": "Setup",
+        "description": "The primitive shapes and their overlapping region.",
+        "elements": [
+          {
+            "element": "box and circle",
+            "current_role": "primary components of a csg object",
+            "enriched_role": "Base solid geometries (primitive A and B)."
+          },
+          {
+            "element": "intersection area of box and circle",
+            "current_role": "CSG object",
+            "enriched_role": "Constructive Solid Geometry boolean intersection region (A ∩ B)."
+          }
+        ],
+        "refinements": []
+      },
+      {
+        "name": "Mechanism",
+        "description": "Tracing paths through the primitives and recording the sequence of boundary crossings.",
+        "elements": [
+          {
+            "element": "rays r1 and r2",
+            "current_role": "both pass through the box and circle, but r1 passes through the intersection/csg object while r2 does not",
+            "enriched_role": "Test rays traversing primitives, generating entry/exit interval spans."
+          },
+          {
+            "element": "ordered list of intersection points for each ray",
+            "current_role": "lists the order of intersection points for each ray with each primitive component by intersection order",
+            "enriched_role": "Sorted 1D list of interval entry/exit boundary hit points along ray path."
+          }
+        ],
+        "refinements": []
+      },
+      {
+        "name": "Result",
+        "description": "Comparing crossing sequences reveals whether each path passes through the overlap region.",
+        "elements": [
+          {
+            "element": "comparison of lists",
+            "current_role": "shows how list order is necessarily different for rays intersecting the csg object and those not, or something similar",
+            "enriched_role": "Evaluating boolean interval overlap: r1 shows entry into box before exiting circle (valid hit in A ∩ B), whereas r2 exits circle before entering box (no hit)."
+          }
+        ],
+        "is_core_focus": true,
+        "refinements": []
+      }
+    ]
+  },
+  {
+    "id": "rotation-scaling",
+    "key_idea": "Demonstrates a composite affine transformation: an arrow is rotated 90 degrees from the z-axis to the y-axis, then scaled up by a factor of 2.",
+    "blocks": [
+      {
+        "name": "Setup",
+        "description": "A 3D coordinate frame (x, y, z) with an initial unit arrow lying along the z-axis.",
+        "elements": [
+          {
+            "element": "3D coordinate axes (x, y, z)",
+            "current_role": "provides spatial orientation and tick marks measuring scale",
+            "enriched_role": "Establishes 3D spatial orientation and scale markings (ticks at 1, 2, etc.)."
+          },
+          {
+            "element": "initial arrow along z-axis",
+            "current_role": "the starting 3D object before transformation, pointing along the z-axis",
+            "enriched_role": "The starting geometry positioned at the origin and oriented forward along the z-axis."
+          }
+        ],
+        "refinements": [
+          "The initial arrow has unit height (reaches tick 1)."
+        ]
+      },
+      {
+        "name": "Mechanism",
+        "description": "A sequential two-step affine transformation: a 90-degree rotation followed by scaling.",
+        "elements": [
+          {
+            "element": "curved arrow labeled 'step 1'",
+            "current_role": "indicates a 90-degree rotation of the arrow from the z-axis to the y-axis",
+            "enriched_role": "Indicates rotation of the arrow from the z-axis up to the y-axis (around the x-axis)."
+          },
+          {
+            "element": "expansion arrows labeled 'step 2'",
+            "current_role": "indicates scaling the upright arrow by a factor of 2 along the coordinate axes",
+            "enriched_role": "Indicate scaling along the coordinate axes."
+          }
+        ],
+        "is_core_focus": true,
+        "refinements": [
+          "Identifies rotation as 90 degrees around the x-axis.",
+          "Identifies scaling as uniform / by a factor of 2.",
+          "Identifies the sequence: rotation occurs first, then scaling."
+        ]
+      },
+      {
+        "name": "Result",
+        "description": "The final arrow stands upright along the y-axis with doubled dimensions (height of 2 and doubled width).",
+        "elements": [
+          {
+            "element": "large upright arrow along y-axis",
+            "current_role": "the final transformed object, standing along the y-axis with doubled dimensions",
+            "enriched_role": "The transformed object reaching y=2 with doubled width."
+          }
+        ],
+        "refinements": [
+          "The final arrow has height 2 and doubled width compared to the original."
+        ]
+      }
+    ]
+  }
+]

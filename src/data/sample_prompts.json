@@ -1,0 +1,1810 @@
+[
+  {
+    "id": "projection",
+    "responses": [
+      {
+        "solo": "prestructural",
+        "text": "The sketch shows a 3D box with some lines going around it. I think it might be showing rotation or some kind of geometric transformation.",
+        "tags": [
+          "misidentifies-operation-as-rotation",
+          "no-mapping-concept"
+        ],
+        "element_refs": {
+          "identified": [
+            "cube",
+            "set of three arrows"
+          ],
+          "missed": [
+            "square shadow on the y-z plane",
+            "set of 3D axes"
+          ]
+        },
+        "verified": true
+      },
+      {
+        "solo": "unistructural",
+        "text": "There's a cube drawn in 3D and a flat square shape next to it on a plane. The sketch is showing something geometric involving a 3D object.",
+        "tags": [
+          "identifies-shapes-only",
+          "tentative-second-element",
+          "misses-arrows-entirely",
+          "no-relationship-between-cube-and-square"
+        ],
+        "element_refs": {
+          "identified": [
+            "cube",
+            "square shadow on the y-z plane"
+          ],
+          "missed": [
+            "set of three arrows",
+            "set of 3D axes"
+          ]
+        },
+        "verified": true
+      },
+      {
+        "solo": "unistructural",
+        "text": "The sketch shows arrows going from a cube towards a flat plane. The arrows seem to indicate some kind of operation being applied to the cube.",
+        "tags": [
+          "notices-arrows-indicate-operation",
+          "tentative-second-element",
+          "misses-resultant-square",
+          "vague-about-what-operation-produces"
+        ],
+        "element_refs": {
+          "identified": [
+            "cube",
+            "set of three arrows"
+          ],
+          "missed": [
+            "square shadow on the y-z plane",
+            "set of 3D axes"
+          ]
+        },
+        "verified": true
+      },
+      {
+        "solo": "multistructural",
+        "text": "There is a cube in 3D space shown on coordinate axes. Arrows go from the vertices of the cube toward the y-z plane. There is a square shape on the y-z plane. The 3D axes give context for where everything is in space.",
+        "tags": [
+          "lists-all-elements-correctly",
+          "no-linking-language",
+          "never-states-what-the-operation-is-or-produces"
+        ],
+        "element_refs": {
+          "identified": [
+            "cube",
+            "set of three arrows",
+            "square shadow on the y-z plane",
+            "set of 3D axes"
+          ],
+          "missed": []
+        },
+        "verified": true
+      },
+      {
+        "solo": "multistructural",
+        "text": "The sketch has a cube, a set of 3D axes, arrows connecting the cube to a flat square shape, and a square on what looks like the y-z plane. Each part of the sketch represents a separate component of the scene.",
+        "tags": [
+          "lists-all-elements-correctly",
+          "explicitly-treats-elements-as-independent",
+          "no-synthesis-attempted"
+        ],
+        "element_refs": {
+          "identified": [
+            "cube",
+            "set of three arrows",
+            "square shadow on the y-z plane",
+            "set of 3D axes"
+          ],
+          "missed": []
+        },
+        "verified": true
+      },
+      {
+        "solo": "relational",
+        "text": "The sketch shows how a cube maps onto the y-z plane via projection. Arrows connect each vertex of the cube to a corresponding point on the plane, and the resulting shape on the plane is a square. The 3D axes clarify which plane is the target. So the key message is that projecting a cube onto the y-z plane produces a square.",
+        "tags": [
+          "states-result-correctly",
+          "missing-why-result-is-square",
+          "describes-mechanism-without-explaining-dimensionality-reduction",
+          "clean-boundary-multi-relational"
+        ],
+        "element_refs": {
+          "identified": [
+            "cube",
+            "set of three arrows",
+            "square shadow on the y-z plane",
+            "set of 3D axes"
+          ],
+          "missed": []
+        },
+        "verified": true
+      },
+      {
+        "solo": "relational",
+        "text": "This sketch demonstrates that projecting a cube onto the y-z plane produces a square. The arrows show the projection operation by mapping each vertex of the cube to the corresponding point on the y-z plane. The 3D axes help identify which plane the cube is being projected onto.",
+        "tags": [
+          "states-result-and-mechanism",
+          "clear"
+        ],
+        "element_refs": {
+          "identified": [
+            "cube",
+            "set of three arrows",
+            "square shadow on the y-z plane",
+            "set of 3D axes"
+          ],
+          "missed": []
+        },
+        "verified": true
+      },
+      {
+        "solo": "relational",
+        "text": "The sketch communicates the result of a projection operation. A cube sits in 3D space, and arrows map each vertex onto the y-z plane. The result is a 2D square \u2014 the cube loses its depth dimension when projected, collapsing into a flat shape. The 3D axes establish the orientation and target plane.",
+        "tags": [
+          "states-result-and-mechanism",
+          "articulates-dimensionality-reduction",
+          "clear"
+        ],
+        "element_refs": {
+          "identified": [
+            "cube",
+            "set of three arrows",
+            "square shadow on the y-z plane",
+            "set of 3D axes"
+          ],
+          "missed": []
+        },
+        "verified": true
+      },
+      {
+        "solo": "extended abstract",
+        "text": "This sketch demonstrates orthographic projection \u2014 mapping a 3D object onto a 2D plane by dropping one coordinate. The arrows trace each vertex of the cube onto the y-z plane, and the result is a square. This also implies the cube is axis-aligned, since any rotation would produce a more complex silhouette. The result generalises: projecting any axis-aligned box along a principal axis gives a rectangle, and the shape of the projection depends on the object's orientation relative to the projection plane.",
+        "tags": [
+          "infers-implicit-constraint-about-cube-alignment",
+          "generalises-to-arbitrary-orientation",
+          "clear"
+        ],
+        "element_refs": {
+          "identified": [
+            "cube",
+            "set of three arrows",
+            "square shadow on the y-z plane",
+            "set of 3D axes"
+          ],
+          "missed": []
+        },
+        "verified": true
+      },
+      {
+        "solo": "prestructural",
+        "text": "The sketch shows how light casts a shadow of a cube onto the y-z plane. The arrows show the light rays hitting each vertex, and the square is the shadow that forms on the plane.",
+        "tags": [
+          "confuses-projection-with-shadow-casting",
+          "misidentifies-arrows-as-light-rays"
+        ],
+        "element_refs": {
+          "identified": [
+            "cube",
+            "square shadow on the y-z plane"
+          ],
+          "missed": [
+            "set of three arrows"
+          ]
+        },
+        "verified": true
+      },
+      {
+        "solo": "extended abstract",
+        "text": "This sketch demonstrates the orthographic projection operator \u2014 a linear map from R\u00b3 to a 2D subspace. The cube's vertices are projected onto the y-z plane by zeroing the x-component, producing a square. Orthographic projection is foundational to CG, used in technical views and parallel projection matrices.",
+        "tags": [
+          "superficial-flourish-risk",
+          "uses-technical-jargon-correctly",
+          "restates-what-sketch-shows-with-vocabulary",
+          "no-novel-insight-beyond-relational"
+        ],
+        "element_refs": {
+          "identified": [
+            "cube",
+            "set of three arrows",
+            "square shadow on the y-z plane"
+          ],
+          "missed": []
+        },
+        "verified": true
+      },
+      {
+        "solo": "relational",
+        "text": "theres a cube and some arrows going to a flat shape on the plane. i think the arrows show how it gets projected? the result ends up being a square which kinda makes sense as the flat version of the cube. the axes tell you its the y-z plane",
+        "tags": [
+          "naturalistic",
+          "hedges-about-arrow-meaning",
+          "states-result-without-explaining-why",
+          "messy-boundary-multi-relational"
+        ],
+        "element_refs": {
+          "identified": [
+            "cube",
+            "square shadow on the y-z plane",
+            "set of 3D axes"
+          ],
+          "missed": [
+            "set of three arrows"
+          ]
+        },
+        "verified": true
+      }
+    ]
+  },
+  {
+    "id": "cube-folding",
+    "responses": [
+      {
+        "solo": "prestructural",
+        "text": "There are some squares arranged in a cross pattern and a 3D cube next to it. There are some labels on the squares. I think it might be showing different views of the same cube.",
+        "tags": [
+          "misreads-net-as-multiple-views",
+          "misses-folding-transformation",
+          "no-orientation-tracking"
+        ],
+        "element_refs": {
+          "identified": [
+            "cube net",
+            "square label",
+            "arrow label",
+            "folded cube"
+          ],
+          "missed": []
+        },
+        "verified": true
+      },
+      {
+        "solo": "unistructural",
+        "text": "The sketch has a cross-shaped flat pattern that looks like what you'd cut out to fold into a cube. I'm not sure about the other parts of the sketch.",
+        "tags": [
+          "fixates-on-net-shape-only",
+          "no-labels-noticed",
+          "no-folded-result"
+        ],
+        "element_refs": {
+          "identified": [
+            "cube net"
+          ],
+          "missed": [
+            "square label",
+            "arrow label",
+            "folded cube",
+            "arrow from net to folded cube"
+          ]
+        },
+        "verified": true
+      },
+      {
+        "solo": "unistructural",
+        "text": "I can see a 3D cube on the right side of the sketch. It has some markings on its faces but I can't tell what they represent or how they relate to the flat shape on the left.",
+        "tags": [
+          "fixates-on-folded-cube-only",
+          "notices-markings-but-cant-interpret",
+          "dismisses-net"
+        ],
+        "element_refs": {
+          "identified": [
+            "folded cube"
+          ],
+          "missed": [
+            "cube net",
+            "square label",
+            "arrow label",
+            "arrow from net to folded cube"
+          ]
+        },
+        "verified": true
+      },
+      {
+        "solo": "multistructural",
+        "text": "The sketch shows a cube net \u2014 a flat unfolded cube \u2014 and then the same cube after being folded into 3D. An arrow connects the two to show the transformation.",
+        "tags": [
+          "identifies-net-as-unfolded-cube",
+          "identifies-folding-transformation",
+          "misses-reference-markers-entirely",
+          "no-orientation-result"
+        ],
+        "element_refs": {
+          "identified": [
+            "cube net",
+            "folded cube",
+            "arrow from net to folded cube"
+          ],
+          "missed": [
+            "square label",
+            "arrow label"
+          ]
+        },
+        "verified": true
+      },
+      {
+        "solo": "multistructural",
+        "text": "There's a flat cross-shaped net with a square symbol and an arrow symbol on two of the faces. The net is folded into a cube, shown on the right, and you can see the same symbols on faces of the cube.",
+        "tags": [
+          "notices-reference-markers",
+          "identifies-folding-transformation",
+          "misses-purpose-of-markers",
+          "no-orientation-result"
+        ],
+        "element_refs": {
+          "identified": [
+            "cube net",
+            "folded cube",
+            "square label",
+            "arrow label"
+          ],
+          "missed": []
+        },
+        "verified": true
+      },
+      {
+        "solo": "multistructural",
+        "text": "The sketch has a cube net with a square label on one face and an arrow label on the rightmost face. An arrow shows this becomes the folded cube on the right. In the folded cube, the same labels appear on different faces. The labels seem to help track where each face ends up after folding.",
+        "tags": [
+          "lists-all-elements-correctly",
+          "identifies-face-tracking-purpose",
+          "misses-arrow-flip",
+          "misses-specific-above-below-result"
+        ],
+        "element_refs": {
+          "identified": [
+            "cube net",
+            "folded cube",
+            "square label",
+            "arrow label",
+            "arrow from net to folded cube"
+          ],
+          "missed": []
+        },
+        "verified": true
+      },
+      {
+        "solo": "multistructural",
+        "text": "There's a cube net and a folded cube. The net has a square symbol and an arrow symbol on specific faces. After folding, the arrow symbol appears on a different face of the cube and is pointing in a different direction. The square symbol is also visible on the folded cube.",
+        "tags": [
+          "notices-arrow-direction-changed",
+          "lists-elements-separately",
+          "no-synthesis-of-what-direction-change-means",
+          "misses-above-below-relationship"
+        ],
+        "element_refs": {
+          "identified": [
+            "cube net",
+            "folded cube",
+            "square label",
+            "arrow label",
+            "arrow from net to folded cube"
+          ],
+          "missed": []
+        },
+        "verified": true
+      },
+      {
+        "solo": "relational",
+        "text": "The cube net has an arrow label on the rightmost face and a square label on an adjacent face. After folding, the face with the arrow label ends up above the face with the square label. The arrow also seems to have changed direction, suggesting the face is flipped during the fold, though it's not entirely clear which direction.",
+        "tags": [
+          "identifies-above-relationship",
+          "notes-direction-changed-but-vague",
+          "missing-explicit-horizontal-flip",
+          "clean-boundary-multi-relational"
+        ],
+        "element_refs": {
+          "identified": [
+            "cube net",
+            "folded cube",
+            "square label",
+            "arrow label",
+            "arrow from net to folded cube"
+          ],
+          "missed": []
+        },
+        "verified": true
+      },
+      {
+        "solo": "relational",
+        "text": "The sketch uses labelled faces to demonstrate what happens during cube folding. The arrow label is on the rightmost face of the net pointing right. After folding, that face is above the square-labelled face, and the arrow now points left \u2014 it has been flipped horizontally. The sketch communicates both where the face lands and how its orientation changes.",
+        "tags": [
+          "identifies-above-relationship",
+          "identifies-horizontal-flip",
+          "explains-both-position-and-orientation",
+          "clear"
+        ],
+        "element_refs": {
+          "identified": [
+            "cube net",
+            "folded cube",
+            "square label",
+            "arrow label",
+            "arrow from net to folded cube"
+          ],
+          "missed": []
+        },
+        "verified": true
+      },
+      {
+        "solo": "relational",
+        "text": "The reference markers (square and arrow) are placed on specific faces to track their orientation through the fold. The key result is that the rightmost face in the net becomes the top face relative to the square-labelled face, and the arrow \u2014 which pointed right in the net \u2014 points left in the folded cube, indicating a horizontal flip during folding.",
+        "tags": [
+          "explains-purpose-of-reference-markers",
+          "identifies-above-relationship",
+          "identifies-horizontal-flip",
+          "clear"
+        ],
+        "element_refs": {
+          "identified": [
+            "cube net",
+            "folded cube",
+            "square label",
+            "arrow label",
+            "arrow from net to folded cube"
+          ],
+          "missed": []
+        },
+        "verified": true
+      },
+      {
+        "solo": "extended abstract",
+        "text": "This sketch demonstrates how to reason about face orientation after folding without physically doing it. The arrow label tracks both which face ends up where (above the square face) and how its orientation is transformed (flipped horizontally: right becomes left). This spatial reasoning is directly relevant to UV texture unwrapping \u2014 when you flatten a 3D mesh into a 2D UV layout, each face's position and orientation in the UV space determines how a texture maps onto it. A misidentified flip would produce a mirrored texture on that face in the final render.",
+        "tags": [
+          "generalises-to-uv-unwrapping",
+          "explains-why-orientation-tracking-matters",
+          "identifies-above-relationship",
+          "identifies-horizontal-flip",
+          "clear"
+        ],
+        "element_refs": {
+          "identified": [
+            "cube net",
+            "folded cube",
+            "square label",
+            "arrow label",
+            "arrow from net to folded cube"
+          ],
+          "missed": []
+        },
+        "verified": true
+      },
+      {
+        "solo": "prestructural",
+        "text": "The sketch shows the steps for assembling a cube from a flat net. The labels on the faces help you match which face goes where during assembly.",
+        "tags": [
+          "treats-as-assembly-guide-not-orientation-problem",
+          "misses-arrow-flip-as-the-point"
+        ],
+        "element_refs": {
+          "identified": [
+            "cube net",
+            "folded cube",
+            "square label"
+          ],
+          "missed": [
+            "arrow label"
+          ]
+        },
+        "verified": true
+      },
+      {
+        "solo": "extended abstract",
+        "text": "This sketch illustrates spatial reasoning \u2014 the ability to mentally fold 3D objects. The reference markers show the arrow flips horizontally during folding. Spatial reasoning is strongly correlated with performance in STEM fields and is tested in standardised aptitude assessments.",
+        "tags": [
+          "superficial-flourish-risk",
+          "generalises-to-psychology-not-cg",
+          "correctly-identifies-arrow-flip",
+          "no-cg-specific-extension"
+        ],
+        "element_refs": {
+          "identified": [
+            "cube net",
+            "folded cube",
+            "square label",
+            "arrow label"
+          ],
+          "missed": []
+        },
+        "verified": true
+      },
+      {
+        "solo": "relational",
+        "text": "the net folds into a cube and the labels track where the faces go. after folding the arrow face is above the square face i think. the arrow also changed direction - it was pointing right and now it points left? not sure if im reading the cube right",
+        "tags": [
+          "naturalistic",
+          "identifies-above-relationship",
+          "notes-arrow-flip-with-uncertainty",
+          "messy-boundary-multi-relational"
+        ],
+        "element_refs": {
+          "identified": [
+            "cube net",
+            "folded cube",
+            "square label",
+            "arrow label"
+          ],
+          "missed": []
+        },
+        "verified": true
+      }
+    ]
+  },
+  {
+    "id": "zoom",
+    "responses": [
+      {
+        "solo": "prestructural",
+        "text": "The sketch shows two observers and a view plane. The observer closer to the view plane has a narrower view because they're too close to see past the edges of the plane. Moving further back gives you a wider angle, like stepping back from a painting to see the whole thing.",
+        "tags": [
+          "inverts-fov-relationship",
+          "applies-intuition-from-physical-viewing-not-projection",
+          "wrong-direction-of-effect"
+        ],
+        "element_refs": {
+          "identified": [
+            "initial observer",
+            "secondary observer",
+            "square with label 'view plane'"
+          ],
+          "missed": [
+            "solid lines from the secondary observer through the view plane onto the tree",
+            "dotted lines from the initial observer through the view plane onto the tree",
+            "tree"
+          ]
+        },
+        "verified": true
+      },
+      {
+        "solo": "unistructural",
+        "text": "There's a labelled rectangle in the middle of the sketch that says 'view plane'. It seems like it's separating two sides of the sketch but I'm not sure what it's for.",
+        "tags": [
+          "fixates-on-view-plane-only",
+          "notices-spatial-separation",
+          "no-observers-or-fov"
+        ],
+        "element_refs": {
+          "identified": [
+            "square with label 'view plane'"
+          ],
+          "missed": [
+            "initial observer",
+            "secondary observer",
+            "dotted lines from the initial observer through the view plane onto the tree",
+            "solid lines from the secondary observer through the view plane onto the tree",
+            "tree",
+            "arrow from initial observer to secondary observer"
+          ]
+        },
+        "verified": true
+      },
+      {
+        "solo": "unistructural",
+        "text": "The sketch shows a tree on one side. There are some lines and figures on the other side but I can't really tell what's happening with them or why the tree is there.",
+        "tags": [
+          "fixates-on-tree-only",
+          "notices-other-elements-vaguely",
+          "no-viewing-concept"
+        ],
+        "element_refs": {
+          "identified": [
+            "tree"
+          ],
+          "missed": [
+            "initial observer",
+            "secondary observer",
+            "square with label 'view plane'",
+            "dotted lines from the initial observer through the view plane onto the tree",
+            "solid lines from the secondary observer through the view plane onto the tree",
+            "arrow from initial observer to secondary observer"
+          ]
+        },
+        "verified": true
+      },
+      {
+        "solo": "multistructural",
+        "text": "The sketch shows two observers at different distances from a view plane. An arrow between them shows the observer moving further away from the plane.",
+        "tags": [
+          "identifies-observer-movement",
+          "no-fov-result-mentioned",
+          "misses-comparison-of-view-angles"
+        ],
+        "element_refs": {
+          "identified": [
+            "initial observer",
+            "secondary observer",
+            "square with label 'view plane'",
+            "arrow from initial observer to secondary observer"
+          ],
+          "missed": [
+            "solid lines from the secondary observer through the view plane onto the tree",
+            "dotted lines from the initial observer through the view plane onto the tree"
+          ]
+        },
+        "verified": true
+      },
+      {
+        "solo": "multistructural",
+        "text": "There are two observers looking at a tree through a view plane. Dotted lines show one observer's view and solid lines show the other's. The observer further away has solid lines that look narrower.",
+        "tags": [
+          "notices-line-width-difference",
+          "identifies-observer-movement",
+          "no-explanation-of-why-or-what-it-means"
+        ],
+        "element_refs": {
+          "identified": [
+            "initial observer",
+            "secondary observer",
+            "square with label 'view plane'",
+            "tree",
+            "solid lines from the secondary observer through the view plane onto the tree",
+            "dotted lines from the initial observer through the view plane onto the tree"
+          ],
+          "missed": []
+        },
+        "verified": true
+      },
+      {
+        "solo": "multistructural",
+        "text": "The sketch shows an initial observer close to the view plane with dotted lines showing their view, and a secondary observer further back with solid lines showing their view. A tree sits on the far side. An arrow shows the observer moving back. The solid lines are narrower than the dotted ones.",
+        "tags": [
+          "lists-all-elements-correctly",
+          "notes-solid-lines-narrower",
+          "no-conclusion-about-fov-effect",
+          "misses-why-fov-narrows"
+        ],
+        "element_refs": {
+          "identified": [
+            "initial observer",
+            "secondary observer",
+            "square with label 'view plane'",
+            "tree",
+            "solid lines from the secondary observer through the view plane onto the tree",
+            "dotted lines from the initial observer through the view plane onto the tree",
+            "arrow from initial observer to secondary observer"
+          ],
+          "missed": []
+        },
+        "verified": true
+      },
+      {
+        "solo": "multistructural",
+        "text": "There are two positions for the observer \u2014 one close and one far from the view plane. Dotted lines represent the first view through the view plane and solid lines represent the second. The tree is the scene being looked at. The view plane acts as a fixed frame that both observers look through.",
+        "tags": [
+          "describes-both-states",
+          "correctly-identifies-view-plane-as-fixed",
+          "no-fov-conclusion-drawn",
+          "misses-angle-change"
+        ],
+        "element_refs": {
+          "identified": [
+            "initial observer",
+            "secondary observer",
+            "square with label 'view plane'",
+            "tree",
+            "solid lines from the secondary observer through the view plane onto the tree",
+            "dotted lines from the initial observer through the view plane onto the tree",
+            "arrow from initial observer to secondary observer"
+          ],
+          "missed": []
+        },
+        "verified": true
+      },
+      {
+        "solo": "relational",
+        "text": "The sketch shows that moving the observer further from the view plane results in a narrower field of view. The dotted lines show the initial wider view and the solid lines show the narrower view of the observer further back. The result is that the scene appears more zoomed in the further the observer is from the view plane.",
+        "tags": [
+          "states-fov-narrows",
+          "identifies-zoom-equivalence",
+          "missing-geometric-reason-fixed-plane-subtends-smaller-angle",
+          "clean-boundary-multi-relational"
+        ],
+        "element_refs": {
+          "identified": [
+            "initial observer",
+            "secondary observer",
+            "square with label 'view plane'",
+            "tree",
+            "solid lines from the secondary observer through the view plane onto the tree",
+            "dotted lines from the initial observer through the view plane onto the tree",
+            "arrow from initial observer to secondary observer"
+          ],
+          "missed": []
+        },
+        "verified": true
+      },
+      {
+        "solo": "relational",
+        "text": "This sketch demonstrates that moving the observer back from a fixed view plane narrows the field of view. The dotted lines show the wide angle of the close observer through the view plane, and the solid lines show the narrower angle of the far observer. Because the view plane stays fixed in size, it subtends a smaller angle from further away \u2014 effectively zooming in on the scene.",
+        "tags": [
+          "states-fov-narrows",
+          "explains-geometric-reason-fixed-plane-smaller-angle",
+          "identifies-zoom-equivalence",
+          "clear"
+        ],
+        "element_refs": {
+          "identified": [
+            "initial observer",
+            "secondary observer",
+            "square with label 'view plane'",
+            "tree",
+            "solid lines from the secondary observer through the view plane onto the tree",
+            "dotted lines from the initial observer through the view plane onto the tree",
+            "arrow from initial observer to secondary observer"
+          ],
+          "missed": []
+        },
+        "verified": true
+      },
+      {
+        "solo": "relational",
+        "text": "The key message is a comparison between two observer positions. Close to the view plane, the observer sees a wide field of view (dotted lines). Further back, the same fixed view plane constrains vision to a narrower angle (solid lines). Moving back zooms in \u2014 a smaller portion of the scene is visible through the same view plane.",
+        "tags": [
+          "frames-as-before-after-comparison",
+          "states-fov-narrows",
+          "explains-fixed-plane-constraint",
+          "identifies-zoom-equivalence",
+          "clear"
+        ],
+        "element_refs": {
+          "identified": [
+            "initial observer",
+            "secondary observer",
+            "square with label 'view plane'",
+            "tree",
+            "solid lines from the secondary observer through the view plane onto the tree",
+            "dotted lines from the initial observer through the view plane onto the tree",
+            "arrow from initial observer to secondary observer"
+          ],
+          "missed": []
+        },
+        "verified": true
+      },
+      {
+        "solo": "extended abstract",
+        "text": "This sketch shows the inverse relationship between observer distance and field of view when the view plane is fixed. Moving the observer back narrows the FOV, which is mathematically equivalent to increasing focal length on a camera. In CG perspective projection this is the d parameter \u2014 the eye-to-plane distance. Increasing d narrows the FOV and produces a telephoto effect without changing the scene geometry, and the sketch makes this geometric effect explicit by contrasting the two observer positions.",
+        "tags": [
+          "connects-to-camera-focal-length",
+          "names-the-d-parameter-in-perspective-projection",
+          "generalises-to-cg-perspective-model",
+          "states-fov-narrows",
+          "clear"
+        ],
+        "element_refs": {
+          "identified": [
+            "initial observer",
+            "secondary observer",
+            "square with label 'view plane'",
+            "tree",
+            "solid lines from the secondary observer through the view plane onto the tree",
+            "dotted lines from the initial observer through the view plane onto the tree",
+            "arrow from initial observer to secondary observer"
+          ],
+          "missed": []
+        },
+        "verified": true
+      },
+      {
+        "solo": "prestructural",
+        "text": "Moving the observer further back from the view plane increases the field of view because they're further from the window and can see more of the scene. The solid lines show a wider view than the dotted lines.",
+        "tags": [
+          "inverts-fov-conclusion",
+          "misreads-solid-lines-as-wider",
+          "wrong-direction-of-effect"
+        ],
+        "element_refs": {
+          "identified": [
+            "initial observer",
+            "secondary observer",
+            "square with label 'view plane'"
+          ],
+          "missed": [
+            "solid lines from the secondary observer through the view plane onto the tree"
+          ]
+        },
+        "verified": true
+      },
+      {
+        "solo": "extended abstract",
+        "text": "This sketch shows the relationship between observer position and field of view in perspective projection. Moving the observer further from the view plane narrows the FOV, equivalent to increasing focal length. Field of view and focal length are inversely related, which is standard in camera optics and CG rendering.",
+        "tags": [
+          "superficial-flourish-risk",
+          "mentions-focal-length",
+          "restates-sketch-with-terminology",
+          "no-d-parameter-precision"
+        ],
+        "element_refs": {
+          "identified": [
+            "initial observer",
+            "secondary observer",
+            "solid lines from the secondary observer through the view plane onto the tree",
+            "square with label 'view plane'"
+          ],
+          "missed": []
+        },
+        "verified": true
+      },
+      {
+        "solo": "relational",
+        "text": "theres two observers at different distances from a view plane. the one further back has narrower lines so i think the view gets smaller when you move back? the view plane being the same size kind of explains it - youre further from a fixed window so you see less",
+        "tags": [
+          "naturalistic",
+          "tentative-fov-conclusion",
+          "correctly-identifies-view-plane-as-fixed",
+          "messy-boundary-multi-relational"
+        ],
+        "element_refs": {
+          "identified": [
+            "initial observer",
+            "secondary observer",
+            "square with label 'view plane'",
+            "solid lines from the secondary observer through the view plane onto the tree"
+          ],
+          "missed": [
+            "tree"
+          ]
+        },
+        "verified": true
+      }
+    ]
+  },
+  {
+    "id": "shadow",
+    "responses": [
+      {
+        "solo": "prestructural",
+        "text": "The sketch is showing a side view of a flashlight beam hitting a circular mirror. The reflected beam bounces off toward p1 and p2, which are sensors measuring light intensity.",
+        "tags": [
+          "completely-misframes-setup",
+          "interprets-circle-as-mirror",
+          "misreads-shadow-rays-as-reflection"
+        ],
+        "element_refs": {
+          "identified": [
+            "lightbulb-styled light source",
+            "circle"
+          ],
+          "missed": [
+            "points labelled p1 and p2",
+            "shadow rays, or rays from the points p1 and p2 to the light source",
+            "bolded intersection point between the circle and the shadow ray cast by p2"
+          ]
+        },
+        "verified": true
+      },
+      {
+        "solo": "unistructural",
+        "text": "There's a lightbulb-style light source drawn at the top of the sketch. Some lines extend from it or toward it, and there's shading in part of the scene, but I'm not sure how it all fits together.",
+        "tags": [
+          "fixates-on-light-source-only",
+          "notices-lines-and-shading-vaguely",
+          "no-ray-or-shadow-concept"
+        ],
+        "element_refs": {
+          "identified": [
+            "lightbulb-styled light source"
+          ],
+          "missed": [
+            "points labelled p1 and p2",
+            "circle",
+            "shadow rays, or rays from the points p1 and p2 to the light source",
+            "bolded intersection point between the circle and the shadow ray cast by p2"
+          ]
+        },
+        "verified": true
+      },
+      {
+        "solo": "unistructural",
+        "text": "There are two points labelled p1 and p2 sitting on a ground line. Lines go from them upward but I can't tell what the lines are connecting to or why there are two separate points.",
+        "tags": [
+          "fixates-on-labelled-points-only",
+          "notices-lines-going-upward",
+          "no-light-or-shadow-concept"
+        ],
+        "element_refs": {
+          "identified": [
+            "points labelled p1 and p2"
+          ],
+          "missed": [
+            "lightbulb-styled light source",
+            "circle",
+            "shadow rays, or rays from the points p1 and p2 to the light source",
+            "bolded intersection point between the circle and the shadow ray cast by p2"
+          ]
+        },
+        "verified": true
+      },
+      {
+        "solo": "multistructural",
+        "text": "The sketch shows a light source, a circle, and two points on the ground. Lines go from the points toward the light. One point appears to be in a darker area near the circle.",
+        "tags": [
+          "describes-visual-scene-without-mechanism",
+          "misses-shadow-ray-as-algorithm",
+          "no-intersection-concept"
+        ],
+        "element_refs": {
+          "identified": [
+            "lightbulb-styled light source",
+            "circle",
+            "points labelled p1 and p2",
+            "shadow rays, or rays from the points p1 and p2 to the light source"
+          ],
+          "missed": [
+            "bolded intersection point between the circle and the shadow ray cast by p2"
+          ]
+        },
+        "verified": true
+      },
+      {
+        "solo": "multistructural",
+        "text": "The sketch shows two points p1 and p2, a light source, and a circle. One point seems to be in shadow and the other isn't. Lines are drawn from each point to the light source.",
+        "tags": [
+          "identifies-two-cases",
+          "identifies-lines-to-light",
+          "misses-intersection-as-the-determining-factor"
+        ],
+        "element_refs": {
+          "identified": [
+            "lightbulb-styled light source",
+            "circle",
+            "points labelled p1 and p2",
+            "shadow rays, or rays from the points p1 and p2 to the light source"
+          ],
+          "missed": [
+            "bolded intersection point between the circle and the shadow ray cast by p2"
+          ]
+        },
+        "verified": true
+      },
+      {
+        "solo": "multistructural",
+        "text": "A light source shines on a scene with a circle that creates a shadow region. P2 is in the shadow cone behind the circle, and p1 is not. Shadow rays go from both points to the light source.",
+        "tags": [
+          "identifies-shadow-cone-visually",
+          "identifies-two-cases",
+          "no-ray-intersection-concept",
+          "misses-that-intersection-is-how-shadow-is-determined-not-just-observed"
+        ],
+        "element_refs": {
+          "identified": [
+            "lightbulb-styled light source",
+            "circle",
+            "points labelled p1 and p2",
+            "shadow rays, or rays from the points p1 and p2 to the light source",
+            "light/shaded-shadow cone around the circle"
+          ],
+          "missed": [
+            "bolded intersection point between the circle and the shadow ray cast by p2"
+          ]
+        },
+        "verified": true
+      },
+      {
+        "solo": "multistructural",
+        "text": "The sketch has two points p1 and p2, a lightbulb, a circle, shadow rays from each point to the light, and a bolded intersection point between p2's ray and the circle. There is also an observer, a ground line, and a shadow cone around the circle.",
+        "tags": [
+          "lists-all-elements-correctly-including-intersection",
+          "notes-intersection-is-bolded",
+          "no-causal-connection-between-intersection-and-shadow-determination"
+        ],
+        "element_refs": {
+          "identified": [
+            "lightbulb-styled light source",
+            "circle",
+            "points labelled p1 and p2",
+            "shadow rays, or rays from the points p1 and p2 to the light source",
+            "bolded intersection point between the circle and the shadow ray cast by p2",
+            "light/shaded-shadow cone around the circle",
+            "observer"
+          ],
+          "missed": []
+        },
+        "verified": true
+      },
+      {
+        "solo": "multistructural",
+        "text": "P1's shadow ray reaches the light source without hitting anything. P2's shadow ray hits the circle on the way, shown by the bolded intersection point, and p2 sits in the shadow cone region. An observer is viewing both points from the side.",
+        "tags": [
+          "describes-both-ray-outcomes",
+          "notes-p1-unobstructed-and-p2-blocked",
+          "no-general-rule-stated",
+          "missing-algorithmic-framing"
+        ],
+        "element_refs": {
+          "identified": [
+            "lightbulb-styled light source",
+            "circle",
+            "points labelled p1 and p2",
+            "shadow rays, or rays from the points p1 and p2 to the light source",
+            "bolded intersection point between the circle and the shadow ray cast by p2",
+            "light/shaded-shadow cone around the circle",
+            "observer"
+          ],
+          "missed": []
+        },
+        "verified": true
+      },
+      {
+        "solo": "relational",
+        "text": "The sketch shows how to determine if a point is in shadow: if the shadow ray from that point to the light source intersects an object, the point is in shadow. If the ray reaches the light unobstructed, it isn't. P2's ray hits the circle (the bolded intersection is the key test) so p2 is in shadow; p1's ray is clear so p1 is lit.",
+        "tags": [
+          "states-the-rule-correctly",
+          "identifies-intersection-as-key-test",
+          "missing-explicit-framing-as-shadow-ray-algorithm",
+          "clean-boundary-multi-relational"
+        ],
+        "element_refs": {
+          "identified": [
+            "lightbulb-styled light source",
+            "circle",
+            "points labelled p1 and p2",
+            "shadow rays, or rays from the points p1 and p2 to the light source",
+            "bolded intersection point between the circle and the shadow ray cast by p2",
+            "light/shaded-shadow cone around the circle",
+            "observer"
+          ],
+          "missed": []
+        },
+        "verified": true
+      },
+      {
+        "solo": "relational",
+        "text": "This sketch demonstrates the shadow ray algorithm. Cast a ray from each point toward the light source. If the ray hits an object on the way (p2's ray intersects the circle \u2014 highlighted by the bolded intersection), the point is in shadow. If it reaches the light unobstructed (p1's ray), the point is lit. The test reduces to: does the shadow ray intersect anything?",
+        "tags": [
+          "names-shadow-ray-algorithm",
+          "states-rule-as-intersection-test",
+          "explains-both-cases-with-examples",
+          "clear"
+        ],
+        "element_refs": {
+          "identified": [
+            "lightbulb-styled light source",
+            "circle",
+            "points labelled p1 and p2",
+            "shadow rays, or rays from the points p1 and p2 to the light source",
+            "bolded intersection point between the circle and the shadow ray cast by p2",
+            "light/shaded-shadow cone around the circle",
+            "observer"
+          ],
+          "missed": []
+        },
+        "verified": true
+      },
+      {
+        "solo": "relational",
+        "text": "The key message is the contrast between p1 and p2. P1's shadow ray reaches the light with no obstruction \u2014 it's lit. P2's ray is blocked by the circle, with the bolded intersection emphasising this as the critical event \u2014 p2 is in shadow. The rule encoded in the sketch is: shadow ray intersection = in shadow; no intersection = lit.",
+        "tags": [
+          "frames-as-contrast-between-two-cases",
+          "states-rule-as-intersection-test",
+          "explains-emphasis-of-bolded-intersection",
+          "clear"
+        ],
+        "element_refs": {
+          "identified": [
+            "lightbulb-styled light source",
+            "circle",
+            "points labelled p1 and p2",
+            "shadow rays, or rays from the points p1 and p2 to the light source",
+            "bolded intersection point between the circle and the shadow ray cast by p2",
+            "light/shaded-shadow cone around the circle",
+            "observer"
+          ],
+          "missed": []
+        },
+        "verified": true
+      },
+      {
+        "solo": "extended abstract",
+        "text": "The sketch illustrates shadow rays as secondary rays in a ray tracing pipeline. After computing primary intersections at p1 and p2, the renderer casts shadow rays toward each light. An intersection with any scene object means the light is occluded (p2's ray blocked by the circle). No intersection means the point is lit (p1). This generalises to any number of lights and any scene geometry \u2014 the shadow test reuses the same ray-object intersection primitive as the primary ray, making it computationally natural to integrate.",
+        "tags": [
+          "frames-shadow-rays-as-secondary-rays-in-pipeline",
+          "connects-to-primary-ray-computation",
+          "generalises-to-arbitrary-lights-and-geometry",
+          "states-rule-as-intersection-test",
+          "clear"
+        ],
+        "element_refs": {
+          "identified": [
+            "lightbulb-styled light source",
+            "circle",
+            "points labelled p1 and p2",
+            "shadow rays, or rays from the points p1 and p2 to the light source",
+            "bolded intersection point between the circle and the shadow ray cast by p2",
+            "light/shaded-shadow cone around the circle",
+            "observer"
+          ],
+          "missed": []
+        },
+        "verified": true
+      },
+      {
+        "solo": "prestructural",
+        "text": "The sketch shows light rays cast from the light source toward p1 and p2. The ray toward p2 is blocked by the circle, causing shadow there. P1 receives direct light because no ray is blocked.",
+        "tags": [
+          "inverts-shadow-ray-direction-light-to-point",
+          "gets-outcome-correct-but-mechanism-wrong"
+        ],
+        "element_refs": {
+          "identified": [
+            "lightbulb-styled light source",
+            "points labelled p1 and p2",
+            "circle"
+          ],
+          "missed": [
+            "shadow rays, or rays from the points p1 and p2 to the light source",
+            "bolded intersection point between the circle and the shadow ray cast by p2"
+          ]
+        },
+        "verified": true
+      },
+      {
+        "solo": "extended abstract",
+        "text": "Shadow rays compute hard shadows from point lights. Unlike rasterisation-based shadow mapping which approximates shadows via depth buffers, ray-traced shadows are geometrically exact. The binary intersection test shown here is why ray tracing is preferred for offline rendering requiring accurate shadows.",
+        "tags": [
+          "superficial-flourish-risk",
+          "contrasts-with-shadow-mapping",
+          "no-extension-of-intersection-logic",
+          "restates-binary-test-with-terminology"
+        ],
+        "element_refs": {
+          "identified": [
+            "shadow rays, or rays from the points p1 and p2 to the light source",
+            "bolded intersection point between the circle and the shadow ray cast by p2"
+          ],
+          "missed": []
+        },
+        "verified": true
+      },
+      {
+        "solo": "relational",
+        "text": "p1 and p2 are being viewed and one is in shadow. the shadow rays go to the light and p2s one hits the circle - shown by the thick intersection dot. p1s ray gets through fine. so if the shadow ray hits something the point is in shadow, if not its lit. the cone and observer are also there but im not sure why they matter",
+        "tags": [
+          "naturalistic",
+          "states-rule-informally",
+          "correctly-identifies-bolded-intersection",
+          "uncertain-about-contextual-elements",
+          "messy-boundary-multi-relational"
+        ],
+        "element_refs": {
+          "identified": [
+            "points labelled p1 and p2",
+            "shadow rays, or rays from the points p1 and p2 to the light source",
+            "bolded intersection point between the circle and the shadow ray cast by p2",
+            "lightbulb-styled light source"
+          ],
+          "missed": [
+            "circle"
+          ]
+        },
+        "verified": true
+      }
+    ]
+  },
+  {
+    "id": "planar distance",
+    "responses": [
+      {
+        "solo": "prestructural",
+        "text": "The sketch shows a point p being reflected across a plane to produce a mirror image. The vector n shows the direction of reflection, and d and d' are the distances before and after the reflection.",
+        "tags": [
+          "completely-misframes-as-reflection",
+          "misreads-normal-as-reflection-direction",
+          "misreads-d-and-dprime-as-pre-post-reflection"
+        ],
+        "element_refs": {
+          "identified": [
+            "point p, depicted as a dot with a line drawn to it from the origin",
+            "labelled plane",
+            "vector n perpedicular from the plane's surface"
+          ],
+          "missed": [
+            "distance d",
+            "distance d'",
+            "labelled origin",
+            "dotted line from an unspecified point to p that forms a right angle with the origin (which is labelled with dotted lines and a square angle label) and goes through n"
+          ]
+        },
+        "verified": true
+      },
+      {
+        "solo": "unistructural",
+        "text": "The sketch shows a point and a flat plane in 3D space with some vectors and labels. I think it's about measuring the distance between the point and the plane somehow, maybe using the vectors.",
+        "tags": [
+          "vague-about-computation",
+          "tentative-second-element",
+          "no-projection-concept",
+          "no-normal-vector-role"
+        ],
+        "element_refs": {
+          "identified": [
+            "point p, depicted as a dot with a line drawn to it from the origin",
+            "labelled plane"
+          ],
+          "missed": [
+            "vector n perpedicular from the plane's surface",
+            "distance d",
+            "distance d'",
+            "dotted line from an unspecified point to p that forms a right angle with the origin (which is labelled with dotted lines and a square angle label) and goes through n"
+          ]
+        },
+        "verified": true
+      },
+      {
+        "solo": "unistructural",
+        "text": "The sketch shows a point p and a plane. d is labelled as the distance between them, and the double underline on d suggests it's the main quantity the sketch is about.",
+        "tags": [
+          "identifies-d-as-target",
+          "tentative-second-element",
+          "notices-double-underline-emphasis",
+          "misses-projection-method",
+          "misses-normal-vector",
+          "misses-d-prime"
+        ],
+        "element_refs": {
+          "identified": [
+            "point p, depicted as a dot with a line drawn to it from the origin",
+            "labelled plane",
+            "distance d"
+          ],
+          "missed": [
+            "vector n perpedicular from the plane's surface",
+            "distance d'",
+            "dotted line from an unspecified point to p that forms a right angle with the origin (which is labelled with dotted lines and a square angle label) and goes through n"
+          ]
+        },
+        "verified": true
+      },
+      {
+        "solo": "multistructural",
+        "text": "There is a point p, a flat plane, and a normal vector n perpendicular to the plane. There is an origin and some distances labelled d and d'. The sketch seems to relate the point's distance to the plane using the normal vector.",
+        "tags": [
+          "identifies-normal-vector",
+          "identifies-two-distances",
+          "no-projection-concept",
+          "no-method-for-combining-them"
+        ],
+        "element_refs": {
+          "identified": [
+            "point p, depicted as a dot with a line drawn to it from the origin",
+            "labelled plane",
+            "vector n perpedicular from the plane's surface",
+            "distance d",
+            "distance d'",
+            "labelled origin"
+          ],
+          "missed": [
+            "dotted line from an unspecified point to p that forms a right angle with the origin (which is labelled with dotted lines and a square angle label) and goes through n"
+          ]
+        },
+        "verified": true
+      },
+      {
+        "solo": "multistructural",
+        "text": "The sketch has a point p with a vector drawn from the origin, a plane, a normal vector n, distances d and d', an origin, and a dotted line which is labelled as the projection of p onto n. The double underline on d marks it as the main result. All the pieces needed to compute something are present.",
+        "tags": [
+          "lists-all-elements-correctly",
+          "correctly-identifies-dotted-line-as-projection",
+          "notes-d-as-main-result",
+          "no-computation-method-stated"
+        ],
+        "element_refs": {
+          "identified": [
+            "point p, depicted as a dot with a line drawn to it from the origin",
+            "labelled plane",
+            "vector n perpedicular from the plane's surface",
+            "distance d",
+            "distance d'",
+            "labelled origin",
+            "dotted line from an unspecified point to p that forms a right angle with the origin (which is labelled with dotted lines and a square angle label) and goes through n"
+          ],
+          "missed": []
+        },
+        "verified": true
+      },
+      {
+        "solo": "multistructural",
+        "text": "The origin serves as the reference point. A vector goes from the origin to p. The normal n is perpendicular to the plane. d' is the distance from the origin to the plane. There's also a dotted projection line from p onto n. These all seem to be the quantities you need to find d.",
+        "tags": [
+          "identifies-all-quantities-correctly",
+          "notes-projection-of-p-onto-n",
+          "no-synthesis-into-computation",
+          "misses-what-to-do-with-these-quantities"
+        ],
+        "element_refs": {
+          "identified": [
+            "point p, depicted as a dot with a line drawn to it from the origin",
+            "labelled plane",
+            "vector n perpedicular from the plane's surface",
+            "distance d",
+            "distance d'",
+            "labelled origin",
+            "dotted line from an unspecified point to p that forms a right angle with the origin (which is labelled with dotted lines and a square angle label) and goes through n"
+          ],
+          "missed": []
+        },
+        "verified": true
+      },
+      {
+        "solo": "relational",
+        "text": "The sketch shows how to find the distance from point p to a plane. You project the vector from the origin to p onto the normal n to get the distance from the origin in the normal direction. d is then found by comparing this with d', the distance from the origin to the plane. The double underline on d shows it's the output.",
+        "tags": [
+          "describes-projection-step-correctly",
+          "identifies-comparison-with-d-prime",
+          "vague-about-what-comparison-means-exactly",
+          "clean-boundary-multi-relational"
+        ],
+        "element_refs": {
+          "identified": [
+            "point p, depicted as a dot with a line drawn to it from the origin",
+            "labelled plane",
+            "vector n perpedicular from the plane's surface",
+            "distance d",
+            "distance d'",
+            "labelled origin",
+            "dotted line from an unspecified point to p that forms a right angle with the origin (which is labelled with dotted lines and a square angle label) and goes through n"
+          ],
+          "missed": []
+        },
+        "verified": true
+      },
+      {
+        "solo": "relational",
+        "text": "The sketch demonstrates how to compute the perpendicular distance from a point p to a plane. The vector from the origin to p is projected onto the plane's normal n using the dot product, giving the component of p along n. d' is the known distance from the origin to the plane along n. Subtracting d' from this projection gives d \u2014 the perpendicular distance from p to the plane.",
+        "tags": [
+          "states-full-computation-correctly",
+          "names-dot-product",
+          "explains-d-prime-as-origin-to-plane-distance",
+          "explains-subtraction-step",
+          "clear"
+        ],
+        "element_refs": {
+          "identified": [
+            "point p, depicted as a dot with a line drawn to it from the origin",
+            "labelled plane",
+            "vector n perpedicular from the plane's surface",
+            "distance d",
+            "distance d'",
+            "labelled origin",
+            "dotted line from an unspecified point to p that forms a right angle with the origin (which is labelled with dotted lines and a square angle label) and goes through n"
+          ],
+          "missed": []
+        },
+        "verified": true
+      },
+      {
+        "solo": "relational",
+        "text": "The sketch makes the geometry of point-to-plane distance visual. d' tells you how far the plane is from the origin along the normal n. Projecting the vector (origin\u2192p) onto n tells you how far p is from the origin in the normal direction. d is the difference \u2014 how much further p sits beyond the plane. The dotted projection line and labelled distances make this subtraction literal.",
+        "tags": [
+          "explains-geometric-meaning-of-each-quantity",
+          "frames-d-as-difference-between-projection-and-d-prime",
+          "clear"
+        ],
+        "element_refs": {
+          "identified": [
+            "point p, depicted as a dot with a line drawn to it from the origin",
+            "labelled plane",
+            "vector n perpedicular from the plane's surface",
+            "distance d",
+            "distance d'",
+            "labelled origin",
+            "dotted line from an unspecified point to p that forms a right angle with the origin (which is labelled with dotted lines and a square angle label) and goes through n"
+          ],
+          "missed": []
+        },
+        "verified": true
+      },
+      {
+        "solo": "extended abstract",
+        "text": "The sketch derives the signed distance from a point to a plane: n\u00b7p \u2212 d', where n\u00b7p is the projection of p onto the unit normal. A positive value means p is on the same side as the normal; negative means the opposite side. This is just the plane equation n\u00b7x = d' rearranged \u2014 plugging in x = p gives the signed distance directly. The formula is fundamental to frustum culling and clipping, where the sign tells you which side of a boundary plane an object is on.",
+        "tags": [
+          "introduces-signed-distance",
+          "gives-explicit-formula",
+          "connects-to-plane-equation",
+          "generalises-to-frustum-culling-and-clipping",
+          "clear"
+        ],
+        "element_refs": {
+          "identified": [
+            "point p, depicted as a dot with a line drawn to it from the origin",
+            "labelled plane",
+            "vector n perpedicular from the plane's surface",
+            "distance d",
+            "distance d'",
+            "labelled origin",
+            "dotted line from an unspecified point to p that forms a right angle with the origin (which is labelled with dotted lines and a square angle label) and goes through n"
+          ],
+          "missed": []
+        },
+        "verified": true
+      },
+      {
+        "solo": "prestructural",
+        "text": "The sketch shows the direct distance from point p to the plane, labelled d. The normal vector n and origin are given as reference information to help set up the coordinate system.",
+        "tags": [
+          "treats-d-as-directly-observable",
+          "misses-projection-step",
+          "misses-d-prime-entirely"
+        ],
+        "element_refs": {
+          "identified": [
+            "point p, depicted as a dot with a line drawn to it from the origin",
+            "labelled plane",
+            "distance d",
+            "vector n perpedicular from the plane's surface"
+          ],
+          "missed": [
+            "distance d'",
+            "dotted line from an unspecified point to p that forms a right angle"
+          ]
+        },
+        "verified": true
+      },
+      {
+        "solo": "extended abstract",
+        "text": "The sketch demonstrates computing perpendicular point-to-plane distance using the dot product \u2014 projecting the position vector onto the unit normal. d = n\u00b7p \u2212 d', giving signed distance. This is standard in computational geometry and linear algebra.",
+        "tags": [
+          "superficial-flourish-risk",
+          "states-formula-without-extending-it",
+          "no-application-to-culling-or-clipping",
+          "no-signed-distance-interpretation"
+        ],
+        "element_refs": {
+          "identified": [
+            "point p, depicted as a dot with a line drawn to it from the origin",
+            "labelled plane",
+            "distance d",
+            "vector n perpedicular from the plane's surface",
+            "distance d'",
+            "dotted line from an unspecified point to p that forms a right angle"
+          ],
+          "missed": []
+        },
+        "verified": true
+      },
+      {
+        "solo": "relational",
+        "text": "theres a point p, a plane, and a normal n. d' is the distance from the origin to the plane. theres a projection of p onto n shown by the dotted line. you compare that projection to d' to get d i think. not totally sure about the subtraction but d seems to be how much further p is past the plane",
+        "tags": [
+          "naturalistic",
+          "identifies-projection-step",
+          "tentative-about-subtraction",
+          "messy-boundary-multi-relational"
+        ],
+        "element_refs": {
+          "identified": [
+            "point p, depicted as a dot with a line drawn to it from the origin",
+            "vector n perpedicular from the plane's surface",
+            "distance d'",
+            "dotted line from an unspecified point to p that forms a right angle"
+          ],
+          "missed": [
+            "distance d",
+            "labelled origin"
+          ]
+        },
+        "verified": true
+      }
+    ]
+  },
+  {
+    "id": "csg",
+    "responses": [
+      {
+        "solo": "prestructural",
+        "text": "The sketch shows two shapes and two rays being tested for reflection and refraction. R1 reflects off the shaded region and r2 passes through the shapes without reflecting. The lists show which surfaces each ray bounces off.",
+        "tags": [
+          "completely-misframes-as-reflection-refraction",
+          "misreads-intersection-lists-as-bounce-surfaces"
+        ],
+        "element_refs": {
+          "identified": [
+            "a ray r1 passing through the shaded area",
+            "a ray r2 that passes through the circle and the box, but not the intersection"
+          ],
+          "missed": [
+            "a rectangle labelled box b and circle labelled circle c, with the intersection between them heavily shaded",
+            "labelled intersection points S#",
+            "explicit list of points derived from intersection by the ray, one list for each ray r1 and r2"
+          ]
+        },
+        "verified": true
+      },
+      {
+        "solo": "unistructural",
+        "text": "There's a darkly shaded area where a rectangle and circle overlap. The shading makes it stand out from the rest of the sketch, so I think it's the important region, but I'm not sure what it represents.",
+        "tags": [
+          "fixates-on-shaded-overlap-only",
+          "no-rays-noticed",
+          "no-intersection-logic"
+        ],
+        "element_refs": {
+          "identified": [
+            "a rectangle labelled box b and circle labelled circle c, with the intersection between them heavily shaded"
+          ],
+          "missed": [
+            "a ray r1 passing through the shaded area",
+            "a ray r2 that passes through the circle and the box, but not the intersection",
+            "labelled intersection points S#",
+            "explicit list of points derived from intersection by the ray, one list for each ray r1 and r2"
+          ]
+        },
+        "verified": true
+      },
+      {
+        "solo": "unistructural",
+        "text": "I can see two lines labelled r1 and r2 going through some shapes. They look like rays. I'm not sure what the shapes are for or what the labels next to the rays mean.",
+        "tags": [
+          "fixates-on-rays-only",
+          "tentative-second-element",
+          "notices-labels-vaguely",
+          "no-csg-or-interval-concept"
+        ],
+        "element_refs": {
+          "identified": [
+            "a ray r1 passing through the shaded area",
+            "a ray r2 that passes through the circle and the box, but not the intersection"
+          ],
+          "missed": [
+            "a rectangle labelled box b and circle labelled circle c, with the intersection between them heavily shaded",
+            "labelled intersection points S#",
+            "explicit list of points derived from intersection by the ray, one list for each ray r1 and r2"
+          ]
+        },
+        "verified": true
+      },
+      {
+        "solo": "multistructural",
+        "text": "The sketch shows a rectangle and a circle overlapping, with two rays passing through them. There are labels on the intersection points and some lists next to the shapes.",
+        "tags": [
+          "identifies-shapes-and-rays",
+          "misses-csg-concept",
+          "misses-what-the-lists-are-for"
+        ],
+        "element_refs": {
+          "identified": [
+            "a rectangle labelled box b and circle labelled circle c, with the intersection between them heavily shaded",
+            "a ray r1 passing through the shaded area",
+            "a ray r2 that passes through the circle and the box, but not the intersection",
+            "labelled intersection points S# (where S is the initial for the shape, c or b, and # is the number of times that shape has been intersected with by the ray, 1 or 2. both rays use this scheme) each time any ray passes through any edge",
+            "explicit list of points derived from intersection by the ray, one list for each ray r1 and r2"
+          ],
+          "missed": []
+        },
+        "verified": true
+      },
+      {
+        "solo": "unistructural",
+        "text": "The sketch shows a CSG object \u2014 the intersection of a box and a circle, shown by the heavily shaded overlap region. Two rays r1 and r2 are tested against it, with r1 passing through the CSG region and r2 missing it.",
+        "tags": [
+          "identifies-csg-as-intersection-region",
+          "tentative-second-element",
+          "identifies-r1-hits-r2-misses",
+          "misses-intersection-point-labels-entirely",
+          "no-interval-logic"
+        ],
+        "element_refs": {
+          "identified": [
+            "a rectangle labelled box b and circle labelled circle c, with the intersection between them heavily shaded",
+            "a ray r1 passing through the shaded area",
+            "a ray r2 that passes through the circle and the box, but not the intersection"
+          ],
+          "missed": [
+            "labelled intersection points S# (where S is the initial for the shape, c or b, and # is the number of times that shape has been intersected with by the ray, 1 or 2. both rays use this scheme) each time any ray passes through any edge",
+            "explicit list of points derived from intersection by the ray, one list for each ray r1 and r2"
+          ]
+        },
+        "verified": true
+      },
+      {
+        "solo": "multistructural",
+        "text": "A box and circle overlap to form a CSG object. Two rays pass through the shapes \u2014 their boundary crossings are labelled b1, b2, c1, c2, and ordered lists of these are shown for each ray. R1 hits the shaded region and r2 doesn't.",
+        "tags": [
+          "notices-ordered-lists-and-labels",
+          "identifies-r1-hits-r2-misses",
+          "no-understanding-of-what-the-ordering-determines"
+        ],
+        "element_refs": {
+          "identified": [
+            "a rectangle labelled box b and circle labelled circle c, with the intersection between them heavily shaded",
+            "a ray r1 passing through the shaded area",
+            "a ray r2 that passes through the circle and the box, but not the intersection",
+            "labelled intersection points S# (where S is the initial for the shape, c or b, and # is the number of times that shape has been intersected with by the ray, 1 or 2. both rays use this scheme) each time any ray passes through any edge",
+            "explicit list of points derived from intersection by the ray, one list for each ray r1 and r2"
+          ],
+          "missed": []
+        },
+        "verified": true
+      },
+      {
+        "solo": "multistructural",
+        "text": "The CSG object is the intersection of box b and circle c, shown by the shaded area. R1 passes through the CSG region. R2 passes through both primitives but misses the CSG region. Each ray has intersection points labelled at each boundary crossing, and an ordered list of these points is shown. The lists record which surfaces each ray hits in sequence.",
+        "tags": [
+          "lists-all-elements-correctly",
+          "describes-list-as-ordered-surface-crossings",
+          "no-connection-between-ordering-and-csg-outcome"
+        ],
+        "element_refs": {
+          "identified": [
+            "a rectangle labelled box b and circle labelled circle c, with the intersection between them heavily shaded",
+            "a ray r1 passing through the shaded area",
+            "a ray r2 that passes through the circle and the box, but not the intersection",
+            "labelled intersection points S# (where S is the initial for the shape, c or b, and # is the number of times that shape has been intersected with by the ray, 1 or 2. both rays use this scheme) each time any ray passes through any edge",
+            "explicit list of points derived from intersection by the ray, one list for each ray r1 and r2"
+          ],
+          "missed": []
+        },
+        "verified": true
+      },
+      {
+        "solo": "multistructural",
+        "text": "The sketch shows r1 hitting the CSG object and r2 missing it, even though r2 still passes through both the box and circle individually. The intersection point lists for the two rays are in a different order of b and c entries. The labelled points mark where each ray enters and exits each shape.",
+        "tags": [
+          "notices-lists-differ-between-r1-and-r2",
+          "identifies-points-as-entry-exit-boundaries",
+          "no-rule-stated-for-why-ordering-determines-hit"
+        ],
+        "element_refs": {
+          "identified": [
+            "a rectangle labelled box b and circle labelled circle c, with the intersection between them heavily shaded",
+            "a ray r1 passing through the shaded area",
+            "a ray r2 that passes through the circle and the box, but not the intersection",
+            "labelled intersection points S# (where S is the initial for the shape, c or b, and # is the number of times that shape has been intersected with by the ray, 1 or 2. both rays use this scheme) each time any ray passes through any edge",
+            "explicit list of points derived from intersection by the ray, one list for each ray r1 and r2"
+          ],
+          "missed": []
+        },
+        "verified": true
+      },
+      {
+        "solo": "relational",
+        "text": "The sketch shows that r1 hits the CSG object because it enters the box while still inside the circle. R2 misses because it exits the circle before entering the box. The ordered lists of intersection points make this visible \u2014 you can read off the order of entry and exit events to see why each outcome occurs.",
+        "tags": [
+          "states-ordering-correctly-for-both-cases",
+          "explains-why-each-ray-hits-or-misses",
+          "missing-generalisation-as-interval-overlap-rule",
+          "clean-boundary-multi-relational"
+        ],
+        "element_refs": {
+          "identified": [
+            "a rectangle labelled box b and circle labelled circle c, with the intersection between them heavily shaded",
+            "a ray r1 passing through the shaded area",
+            "a ray r2 that passes through the circle and the box, but not the intersection",
+            "labelled intersection points S# (where S is the initial for the shape, c or b, and # is the number of times that shape has been intersected with by the ray, 1 or 2. both rays use this scheme) each time any ray passes through any edge",
+            "explicit list of points derived from intersection by the ray, one list for each ray r1 and r2"
+          ],
+          "missed": []
+        },
+        "verified": true
+      },
+      {
+        "solo": "relational",
+        "text": "The sketch demonstrates the interval overlap test for CSG intersection. For a ray to hit the intersection of two shapes, it must be inside both simultaneously. The ordered intersection point lists reveal this: r1 enters the box before exiting the circle (intervals overlap \u2192 hit), while r2 exits the circle before entering the box (no overlap \u2192 miss). The rule is: do the inside-box interval [b1,b2] and inside-circle interval [c1,c2] overlap?",
+        "tags": [
+          "states-interval-overlap-rule",
+          "explains-both-cases-with-rule",
+          "frames-lists-as-encoding-intervals",
+          "clear"
+        ],
+        "element_refs": {
+          "identified": [
+            "a rectangle labelled box b and circle labelled circle c, with the intersection between them heavily shaded",
+            "a ray r1 passing through the shaded area",
+            "a ray r2 that passes through the circle and the box, but not the intersection",
+            "labelled intersection points S# (where S is the initial for the shape, c or b, and # is the number of times that shape has been intersected with by the ray, 1 or 2. both rays use this scheme) each time any ray passes through any edge",
+            "explicit list of points derived from intersection by the ray, one list for each ray r1 and r2"
+          ],
+          "missed": []
+        },
+        "verified": true
+      },
+      {
+        "solo": "relational",
+        "text": "The key message is how the ordered list of intersection points encodes whether a ray hits a CSG intersection object. Reading the list in order shows the intervals during which the ray is inside each primitive. If these overlap, the ray is inside both at once and hits the CSG object (r1). If not, it misses (r2 exits the circle before entering the box). The labels b1, b2, c1, c2 make these intervals explicit.",
+        "tags": [
+          "frames-lists-as-computational-artefact",
+          "states-interval-overlap-rule",
+          "explains-both-cases",
+          "clear"
+        ],
+        "element_refs": {
+          "identified": [
+            "a rectangle labelled box b and circle labelled circle c, with the intersection between them heavily shaded",
+            "a ray r1 passing through the shaded area",
+            "a ray r2 that passes through the circle and the box, but not the intersection",
+            "labelled intersection points S# (where S is the initial for the shape, c or b, and # is the number of times that shape has been intersected with by the ray, 1 or 2. both rays use this scheme) each time any ray passes through any edge",
+            "explicit list of points derived from intersection by the ray, one list for each ray r1 and r2"
+          ],
+          "missed": []
+        },
+        "verified": true
+      },
+      {
+        "solo": "extended abstract",
+        "text": "The sketch demonstrates the interval-based CSG ray intersection algorithm. Collecting ordered boundary crossings for each primitive gives interval endpoints for when the ray is inside each shape. For intersection (AND), the ray hits if the intervals overlap \u2014 as with r1. This generalises: union (OR) means hit if inside either interval; difference (A\u2212B) means inside A but not B. The same mechanism extends to hierarchical CSG trees by recursively evaluating sub-expressions. The sketch concretises the algorithm's core logic for the intersection case.",
+        "tags": [
+          "generalises-to-union-and-difference",
+          "names-hierarchical-csg",
+          "states-interval-overlap-rule",
+          "frames-sketch-as-one-case-of-general-algorithm",
+          "clear"
+        ],
+        "element_refs": {
+          "identified": [
+            "a rectangle labelled box b and circle labelled circle c, with the intersection between them heavily shaded",
+            "a ray r1 passing through the shaded area",
+            "a ray r2 that passes through the circle and the box, but not the intersection",
+            "labelled intersection points S# (where S is the initial for the shape, c or b, and # is the number of times that shape has been intersected with by the ray, 1 or 2. both rays use this scheme) each time any ray passes through any edge",
+            "explicit list of points derived from intersection by the ray, one list for each ray r1 and r2"
+          ],
+          "missed": []
+        },
+        "verified": true
+      },
+      {
+        "solo": "prestructural",
+        "text": "R1 hits the CSG region and r2 doesn't. The difference must be because r1 crosses more boundary points \u2014 it has four labelled intersections \u2014 so it passes through more of the shapes and hits the overlap.",
+        "tags": [
+          "misidentifies-test-as-counting-intersection-points",
+          "correctly-identifies-r1-hits-r2-misses",
+          "wrong-explanation-of-why"
+        ],
+        "element_refs": {
+          "identified": [
+            "a ray r1 passing through the shaded area",
+            "a ray r2 that passes through the circle and the box, but not the intersection",
+            "labelled intersection points S#"
+          ],
+          "missed": [
+            "explicit list of points derived from intersection by the ray",
+            "a rectangle labelled box b and circle labelled circle c, with the intersection between them heavily shaded"
+          ]
+        },
+        "verified": true
+      },
+      {
+        "solo": "prestructural",
+        "text": "CSG intersection is a standard operation in ray tracing. The interval-based approach efficiently handles Boolean combinations of primitives and integrates naturally into BVH acceleration structures, where CSG nodes sit alongside mesh primitives. Production renderers like Cycles and Arnold implement CSG through similar interval methods.",
+        "tags": [
+          "superficial-flourish-risk",
+          "mentions-bvh-and-production-renderers",
+          "no-extension-of-union-difference-logic",
+          "no-hierarchical-csg-derivation",
+          "ignores-sketch-entirely"
+        ],
+        "element_refs": {
+          "identified": [],
+          "missed": [
+            "explicit list of points derived from intersection by the ray",
+            "a ray r1 passing through the shaded area",
+            "a ray r2 that passes through the circle and the box, but not the intersection",
+            "a rectangle labelled box b and circle labelled circle c, with the intersection between them heavily shaded"
+          ]
+        },
+        "verified": true
+      },
+      {
+        "solo": "relational",
+        "text": "so r1 goes through the shaded bit and r2 doesnt even though r2 hits both shapes. the ordered lists show the crossings differently for each ray. for r1 it looks like it enters the box before leaving the circle which is why it hits the intersection? the labels b1 b2 c1 c2 help you read the order",
+        "tags": [
+          "naturalistic",
+          "tentative-interval-insight",
+          "correctly-identifies-entry-before-exit",
+          "messy-boundary-multi-relational"
+        ],
+        "element_refs": {
+          "identified": [
+            "labelled intersection points S#",
+            "explicit list of points derived from intersection by the ray",
+            "a ray r1 passing through the shaded area",
+            "a ray r2 that passes through the circle and the box, but not the intersection"
+          ],
+          "missed": [
+            "a rectangle labelled box b and circle labelled circle c, with the intersection between them heavily shaded"
+          ]
+        },
+        "verified": true
+      }
+    ]
+  }
+]

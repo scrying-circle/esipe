@@ -1,0 +1,663 @@
+[
+  {
+    "id": "projection",
+    "key_idea": "Shows the projection of a cube onto the y-z plane",
+    "description": "PLACEHOLDER - please provide your best evaluation based on their explanation",
+    "key_elements": [
+      {
+        "element": "cube",
+        "role": "original object to be projected"
+      },
+      {
+        "element": "shaded square on the y-z plane",
+        "role": "this is the resultant shape of the projection/flattening of the cube onto the y-z plane"
+      }
+    ],
+    "contextual_elements": [
+      {
+        "element": "set of 3D axes",
+        "role": "provides a clear indication of the orientation of the cube in 3D space, as well as the plane it lands on (the y-z plane)"
+      },
+      {
+        "element": "three arrows",
+        "role": "these indicate projection by mapping vertices of the cube to vertices on the resultant projected shape"
+      }
+    ],
+    "sketchUrl": "/sketches/projection.jpg",
+    "blocks": [
+      {
+        "name": "Setup",
+        "description": "The initial spatial context, including the object and coordinate system.",
+        "elements": [
+          {
+            "element": "cube",
+            "role": "The 3D object being transformed; it is aligned with the coordinate axes."
+          },
+          {
+            "element": "set of 3D axes",
+            "role": "Establish the 3D coordinate system (x, y, z) and orientation in space."
+          }
+        ],
+        "refinements": [
+          "The cube is aligned with the axes/coordinate system."
+        ]
+      },
+      {
+        "name": "Mechanism",
+        "description": "A projection operation that maps the cube onto the yz-plane.",
+        "refinements": [
+          "The projection is orthogonal / perpendicular to the yz-plane."
+        ],
+        "elements": [
+          {
+            "element": "three arrows",
+            "role": "Arrows map vertices on cube to vertices onto the projected shape, emphasising the operation is vertex by vertex and not the cube as a whole, and therefore is likely a projection rather than, say, a translation. The projection is orthogonal."
+          }
+        ],
+        "is_core_focus": true
+      },
+      {
+        "name": "Result",
+        "description": "The result of the projection of the cube is a square on the yz-plane.",
+        "elements": [
+          {
+            "element": "shaded square on the y-z plane",
+            "role": "The result of the projection, it is placed on the yz-plane and occupies the same yz coordinates as the cube."
+          }
+        ],
+        "refinements": []
+      }
+    ]
+  },
+  {
+    "id": "cube-folding",
+    "key_idea": "Demonstrates the folding of a cube net, using two labels to keep track of its orientation",
+    "key_elements": [
+      {
+        "element": "cube net",
+        "role": "the characteristic shape of an unfolded cube, made up of 6 squares in a lowercase t shape, but rotated, so the long base of the t is pointing right"
+      },
+      {
+        "element": "square label",
+        "role": "placed on the square on one arm of the t, it is a reference marker that is present in the depiction of the folded cube"
+      },
+      {
+        "element": "arrow label",
+        "role": "placed on the square at the base of the t pointing right, it is a reference marker that is present in the depiction of the folded cube that also contains left-right information"
+      },
+      {
+        "element": "folded cube",
+        "role": "a depiction of the net after being folded, including the reference labels from the net"
+      }
+    ],
+    "contextual_elements": [
+      {
+        "element": "arrow from net to folded cube",
+        "role": "indicates the relationship between these two scenes being a kind of transformation, which, given the shapes, should be assumed to be folding"
+      }
+    ],
+    "sketchUrl": "/sketches/cube-folding.jpg",
+    "blocks": [
+      {
+        "name": "Setup",
+        "description": "There is an unfolded cube net.",
+        "elements": [
+          {
+            "element": "6 squares in a lowercase t shape, but rotated, so the long base of the t is pointing right",
+            "role": "a cube net, the characteristic shape of an unfolded cube"
+          },
+          {
+            "element": "square decoration on the south square of cube net",
+            "role": "a label that keeps track of the position of the face it is attached to"
+          },
+          {
+            "element": "arrow decoration on the eastmost square of the cube net",
+            "role": "a label that keeps track of the position and orientation of the face it is attached to. The arrow is pointing right"
+          }
+        ],
+        "refinements": [
+          "Hypothesises the role of the decorations/labels"
+        ]
+      },
+      {
+        "name": "Mechanism",
+        "description": "The cube net is folded into a cube.",
+        "elements": [
+          {
+            "element": "arrow from net to folded cube",
+            "role": "indicates the folding transformation"
+          }
+        ],
+        "refinements": []
+      },
+      {
+        "name": "Result",
+        "description": "3D cube, which shows the orientation of the labelled faces after folding",
+        "elements": [
+          {
+            "element": "three faces of the 3d cube",
+            "role": "depiction of the net after folding, with the top face having the arrow label pointing left, and the face with the square label is the right face below that one. The third face is blank."
+          }
+        ],
+        "is_core_focus": true,
+        "refinements": [
+          "The arrow-labelled face has the arrow flipped from right to left.",
+          "The arrow-labelled face is adjacent to the square-labelled face after folding"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ray-circle-intersection",
+    "key_idea": "Rays can intersect a circle at zero, one, or two points.",
+    "description": "There are three rays, annotated with cases 1 through 3, and a circle. The case 1 ray does not intersect the circle, the case 2 ray is tangent to the circle at one point, and the case 3 ray intersects the circle at two points. The intersection points are explicitly highlighted and act as the dependent variable over each of the 3 cases, implying they are the focus of this exercise.",
+    "key_elements": [
+      {
+        "element": "three rays",
+        "role": "cases 1 through 3 traversing at varying distances from the circle"
+      },
+      {
+        "element": "circle",
+        "role": "target geometry boundary being tested for ray intersection"
+      },
+      {
+        "element": "highlighted intersection points",
+        "role": "shows 0, 1, or 2 intersection points depending on whether the ray misses, is tangent, or is secant"
+      }
+    ],
+    "contextual_elements": [],
+    "sketchUrl": "/sketches/sphere-ray-intersection.jpg",
+    "blocks": [
+      {
+        "name": "Setup",
+        "description": "There are three roughly parallel rays at different positions. There is also a circle.",
+        "elements": [
+          {
+            "element": "three roughly parallel arrows with labels case 1/case 2/case 3.",
+            "role": "Represent 3 rays with different trajectories. In a CG context, we can guess the important part is their intersection points with any scene they are in."
+          },
+          {
+            "element": "circle",
+            "role": "Could be interpreted as a sphere. It is the scene with which the rays may interact with."
+          }
+        ],
+        "refinements": [
+        ]
+      },
+      {
+        "name": "Result",
+        "description": "Rays, in general, can intersect circles/spheres 0, 1, or 2 times.",
+        "elements": [
+          {
+            "element": "'case' label",
+            "role": "implies a general formulation of ray/circle intersection."
+          }
+        ],
+        "is_core_focus": true,
+        "refinements": [
+          "Intersection point count depends on ray offset from circle itself"
+        ]
+      },
+      {
+        "name": "Mechanism",
+        "description": "Some of the rays intersect the circle",
+        "elements": [
+          {
+            "element": "bold dots where the rays touch the circle",
+            "role": "Represent the intersection points between the rays and the circle. Case 1 intersects the circle 0 times. Case 2 intersects the circle 1 time. Case 3 intersects the circle 2 times."
+          }
+        ],
+        "refinements": [
+        ]
+      }
+    ]
+  },
+  {
+    "id": "zoom",
+    "key_idea": "The effect of moving the observer away from the view plane is that the field/angle of view narrows or, put differently, the scene becomes more zoomed in",
+    "description": "PLACEHOLDER - please provide your best evaluation based on their explanation",
+    "key_elements": [
+      {
+        "element": "initial observer",
+        "role": "this represents the initial position of the observer"
+      },
+      {
+        "element": "secondary observer",
+        "role": "this represents the second position of the observer, further from the view plane than the initial observer"
+      },
+      {
+        "element": "dotted lines from the initial observer through the view plane onto the tree",
+        "role": "this represents the initial view of the tree by the observer.The dotted nature also hints that this is a transient state."
+      },
+      {
+        "element": "solid lines from the secondary observer through the view plane onto the tree",
+        "role": "this represents the second view of the tree by the observer, and notably the view angle is narrower due to the view plane constraint"
+      },
+      {
+        "element": "square with label 'view plane'",
+        "role": "this is the view plane, limiting the vision through which the observers view the tree"
+      },
+      {
+        "element": "tree",
+        "role": "this is the object being viewed by the observers, and is a generic stand-in for any scene. Its basic nature implies that the author of the sketch is not concerned with the specifics of the scene in this case."
+      }
+    ],
+    "contextual_elements": [
+      {
+        "element": "arrow from initial observer to secondary observer",
+        "role": "presents the intention that we are looking at the difference between the two states due to moving the observer away from the view plane"
+      }
+    ],
+    "sketchUrl": "/sketches/zoom.jpg",
+    "blocks": [
+      {
+        "name": "Setup",
+        "description": "An observer sees a scene (a tree) through a view plane.",
+        "elements": [
+          {
+            "element": "tree",
+            "role": "object being viewed, acting as a generic scene, but may be interpreted specifically"
+          },
+          {
+            "element": "plane with label 'view plane'",
+            "role": "represents the view plane, limiting the field of view of the observer on the scene"
+          },
+          {
+            "element": "dotted lines from the initial observer through the view plane onto the tree",
+            "role": "this represents the initial view of the tree by the observer.The dotted nature also hints that this is a transient state."
+          },
+          {
+            "element": "eye/observer icon",
+            "role": "this represents the initial position of the observer"
+          }
+        ],
+        "refinements": []
+      },
+      {
+        "name": "Mechanism",
+        "description": "The observer moves back away from the view plane/to the left to a new position.",
+        "elements": [
+          {
+            "element": "arrow from one observer to the next",
+            "role": "indicates the transition (movement) of the observer"
+          },
+          {
+            "element": "second eye/observer icon to the left of the first",
+            "role": "this represents the secondary position of the observer"
+          }
+        ],
+        "refinements": []
+      },
+      {
+        "name": "Result",
+        "description": "The field of view changes with the observer's distance from the view plane. In this case, the field of view narrows, since the observer moved back.",
+        "elements": [
+          {
+            "element": "solid lines from the secondary observer through the view plane onto the tree",
+            "role": "this represents the second view of the tree by the observer, and notably the view angle is narrower due to the view plane constraint"
+          }
+        ],
+        "is_core_focus": true,
+        "refinements": []
+      }
+    ]
+  },
+  {
+    "id": "shadow",
+    "key_idea": "a shadow ray from a point not in shadow to the light source does not intersect any objects, while one from a point in shadow does intersect an object",
+    "description": "PLACEHOLDER - please provide your best evaluation based on their explanation",
+    "key_elements": [
+      {
+        "element": "points labelled p1 and p2",
+        "role": "these points represent the different cases of being in shadow and not in shadow"
+      },
+      {
+        "element": "lightbulb-styled light source",
+        "role": "the light source which casts the shadow"
+      },
+      {
+        "element": "circle",
+        "role": "casts a shadow due to the light source. This also means the shadow ray cast by p2 to the light source intersects this circle."
+      },
+      {
+        "element": "shadow rays, or rays from the points p1 and p2 to the light source",
+        "role": "whether these rays are blocked by objects on the way to the light source determines whether the point is in shadow or not"
+      },
+      {
+        "element": "bolded intersection point between the circle and the shadow ray cast by p2",
+        "role": "this draws importance to the fact that this shadow ray has an intersection point with an object, implying this intersection is a key concept in the sketch"
+      }
+    ],
+    "contextual_elements": [
+      {
+        "element": "observer",
+        "role": "provides a viewer to make the decision of in shadow or not meaningful"
+      },
+      {
+        "element": "line representing a flat ground",
+        "role": "Provides a surface for the observer to be looking at, justifying computation of shadows at the two points"
+      },
+      {
+        "element": "light/shaded-shadow cone around the circle",
+        "role": "clearly shows this sketch concerns shadows, and that p2 resides in the shadow zone by the circle, so we would expect results that correlate with that fact"
+      },
+      {
+        "element": "primary rays to p1 and p2 from the observer",
+        "role": "emphasise that these points are being viewed, making the decision of whether the points are in shadow or not meaningful"
+      }
+    ],
+    "sketchUrl": "/sketches/shadow.jpg",
+    "blocks": [
+      {
+        "name": "Setup",
+        "description": "There is a light source, and two points on a ground plane. Between one of the points (p2) is a circular object blocking light.",
+        "elements": [
+          {
+            "element": "lightbulb at top right",
+            "role": "light source for the scene"
+          },
+          {
+            "element": "circle below light source",
+            "role": "blocks the light toward p2"
+          },
+          {
+            "element": "points p1 and p2",
+            "role": "points of interest, each representing a different case of in-shadow or not-in-shadow"
+          },
+          {
+            "element": "flat line",
+            "role": "ground plane upon which p1 and p2 rest"
+          },
+          {
+            "element": "eye icon in top left",
+            "role": "observer providing context for why the shadow detection is being done"
+          }
+        ],
+        "refinements": [
+          "Hypothesises the role of the observer"
+        ]
+      },
+      {
+        "name": "Mechanism",
+        "description": "Casting shadow rays from points p1/p2 toward the light source.",
+        "elements": [
+          {
+            "element": "shadow rays",
+            "role": "rays from p1/p2 to light source"
+          }
+        ],
+        "refinements": []
+      },
+      {
+        "name": "Result",
+        "description": "The intersection of the shadow ray with an object (or simply obstruction) is what determines if a point is in shadow.",
+        "elements": [
+          {
+            "element": "shadow-ray circle intersection point",
+            "role": "p2's shadow ray intersects the circle at this clearly indicated point. Therefore, p2 is in shadow"
+          },
+          {
+            "element": "shaded area extending from circle down to ground plane away from light source, containing p2",
+            "role": "indicates the shadowed region from the circle. verifies that p2 is indeed in shadow"
+          }
+        ],
+        "is_core_focus": true,
+        "refinements": []
+      }
+    ]
+  },
+  {
+    "id": "planar distance",
+    "key_idea": "the distance from a point to a plane can be computed by finding the magnitude of the projection of the vector from the origin to the point onto the plane's normal, and comparing it with the distance of the plane to the origin along that normal",
+    "sketchUrl": "/sketches/distance-to-plane.jpg",
+    "blocks": [
+      {
+        "name": "Setup",
+        "description": "Shown is a labelled point, plane, and origin. We are also given the plane's normal and the perpendicular distance from the plane to the origin.",
+        "elements": [
+          {
+            "element": "plane",
+            "role": "flat plane from which distances are calculated"
+          },
+          {
+            "element": "point p, depicted as a dot with a line drawn to it from the origin",
+            "role": "represents both the point and the vector from the origin to that point"
+          },
+          {
+            "element": "point labelled origin",
+            "role": "functions as the reference point for the the point p and the plane"
+          },
+          {
+            "element": "small vector perpendicular to the plane along distance d'",
+            "role": "clearly indicates that d' is a perpendicular distance"
+          },
+          {
+            "element": "large left curly brace spanning the distance between p and the plane along n, labelled d",
+            "role": "the double underline under the d hints that this is the central concept of the sketch. It is the distance from the plane to the point p via the vector normal n to the plane."
+          },
+          {
+            "element": "vector n perpedicular from the plane's surface, pointing up to p",
+            "role": "the normal vector of the plane"
+          }
+        ],
+        "refinements": []
+      },
+      {
+        "name": "Mechanism",
+        "description": "Project vector p onto n, as a step toward calculating distance d",
+        "elements": [
+          {
+            "element": "labelled dotted line as the projection of p onto n, forming a right triangle with vector p as its hypotenuse",
+            "role": "crucial step for determining distance d"
+          }
+        ],
+        "refinements": []
+      },
+      {
+        "name": "Result",
+        "description": "Can compare the length of the projection with d' to obtain d.",
+        "elements": [
+          {
+            "element": "visual indication that d and d' are related, as their vectors are parallel with each other and the projection of p onto n",
+            "role": "hints that there is a relationship between these quantities"
+          }
+        ],
+        "is_core_focus": true,
+        "refinements": [
+          "d is d' subtracted from the length of the projection"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "csg",
+    "key_idea": "in a ray intersecting the csg object, the ray intersects the box before it leaves the circle, and in a ray not intersecting the csg object, the ray leaves the circle before entering the box",
+    "description": "PLACEHOLDER - please provide your best evaluation based on their explanation",
+    "key_elements": [
+      {
+        "element": "a rectangle labelled box b and circle labelled circle c, with the intersection between them heavily shaded",
+        "role": "the shaded area represents the CSG object, and the circle and box are the primary components"
+      },
+      {
+        "element": "a ray r1 passing through the shaded area",
+        "role": "represents a ray that intersects the CSG object"
+      },
+      {
+        "element": "a ray r2 that passes through the circle and the box, but not the intersection",
+        "role": "represents a ray that does not intersect the CSG object but intersects the primary components of the csg"
+      },
+      {
+        "element": "labelled intersection points S# (where S is the initial for the shape, c or b, and # is the number of times that shape has been intersected with by the ray, 1 or 2. both rays use this scheme) each time any ray passes through any edge",
+        "role": "provides an ordered list of points on the primaries each ray goes through we can compare"
+      },
+      {
+        "element": "explicit list of points derived from intersection by the ray, one list for each ray r1 and r2",
+        "role": "easy to compare and contrast the order of point intersections. we can see that because r2 sees the outer edge of the circle before entering the box, it doesnt hit the intersection region"
+      }
+    ],
+    "contextual_elements": [],
+    "sketchUrl": "/sketches/csg-intersection.jpg",
+    "blocks": [
+      {
+        "name": "Setup",
+        "description": "A csg object is formed from the intersection region between a rectangle and a circle. Two rays are cast, one intersecting the csg object, one only intersecting the rectangle and circle separately, missing the csg object.",
+        "elements": [
+          {
+            "element": "a rectangle labelled box b and circle labelled circle c, with the intersection between them heavily shaded",
+            "role": "the shaded area represents the CSG object, and the circle and box are the primary components"
+          },
+          {
+            "element": "a ray r1 passing through the shaded area",
+            "role": "represents a ray that intersects the CSG object"
+          },
+          {
+            "element": "a ray r2 that passes through the circle and the box, but not the intersection",
+            "role": "represents a ray that does not intersect the CSG object but intersects the primary components of the csg"
+          }
+        ],
+        "refinements": []
+      },
+      {
+        "name": "Mechanism",
+        "description": "Record the intersection points of each ray with each primitive, in order.",
+        "elements": [
+          {
+            "element": "labelled intersection points S# (where S is the initial for the shape, c or b, and # is the number of times that shape has been intersected with by the ray, 1 or 2. both rays use this scheme) each time any ray passes through any edge",
+            "role": "provides an ordered list of points for each ray as it goes through the primitives, so we can compare"
+          }
+        ],
+        "refinements": []
+      },
+      {
+        "name": "Result",
+        "description": "Intersection point sequence order changes depending on whether the ray intersects the csg object or not.",
+        "elements": [
+          {
+            "element": "explicit list of points derived from intersection by the ray, one list for each ray r1 and r2",
+            "role": "easy to compare and contrast the order of point intersections. we can see that because r2 sees the outer edge of the circle before entering the box (c2 comes before b1), it doesnt hit the intersection region"
+          }
+        ],
+        "is_core_focus": true,
+        "refinements": [
+          "To intersect the csg object, there cannot be a second intersection with a primitive before the first intersection with another"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "rotation-scaling",
+    "key_idea": "Demonstrates the effect of a rotation followed by a scaling on a sample object.",
+    "sketchUrl": "/sketches/rotation-scaling.jpg",
+    "blocks": [
+      {
+        "name": "Setup",
+        "description": "An arrow lies in 3d space.",
+        "elements": [
+          {
+            "element": "3D coordinate axes (x, y, z)",
+            "role": "Establishes spatial orientation and scale (ticks at 1, 2, etc.)."
+          },
+          {
+            "element": "initial arrow pointing along z-axis",
+            "role": "The starting geometry positioned at the origin and oriented forward along the z-axis."
+          }
+        ],
+        "refinements": [
+          "The arrow lies in the x-z plane, pointing down the z-axis."
+        ]
+      },
+      {
+        "name": "Mechanism",
+        "description": "Two step transformation of the arrow: a 90-degree rotation followed by scaling.",
+        "elements": [
+          {
+            "element": "curved arrow labeled 'step 1'",
+            "role": "Indicates rotation of the arrow from the z-axis up to the y-axis (around the x-axis)."
+          },
+          {
+            "element": "directional expansion arrows labeled 'step 2'",
+            "role": "Indicate scaling along the coordinate axes."
+          },
+          {
+            "element": "small arrow in x-y plane",
+            "role": "result of the transformation indicated in step 1 to the original arrow"
+          }
+        ],
+        "is_core_focus": true,
+        "refinements": [
+          "Identifies rotation as 90 degrees around the x-axis.",
+          "Identifies scaling as uniform / by a factor of 2."
+        ]
+      },
+      {
+        "name": "Result",
+        "description": "The final arrow is upright in the yz-plane and large.",
+        "elements": [
+          {
+            "element": "large arrow in x-y plane",
+            "role": "result of the transformation indicated in step 2 to the result from step 1"
+          }
+        ],
+        "refinements": [
+          "The final arrow has height 2 and doubled width compared to the original."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "2d-rotation",
+    "key_idea": "A square is rotated 45 degrees to form a diamond.",
+    "sketchUrl": "/sketches/2d-rotation.jpg",
+    "blocks": [
+      {
+        "name": "Setup",
+        "description": "There is an axis-aligned square.",
+        "elements": [
+          {
+            "element": "a square",
+            "role": "Establishes the starting object for a demonstrative transformation: a square"
+          },
+          {
+            "element": "left panel of three",
+            "role": "indicates chronology: this representation of the initial state of the square is the first state of 3."
+          }
+        ],
+        "refinements": [
+        ]
+      },
+      {
+        "name": "Mechanism",
+        "description": "A rotation is applied to the square.",
+        "elements": [
+          {
+            "element": "the square, with curved arrows pointing anticlockwise around its sides",
+            "role": "Establishes the transformation being used: a rotation."
+          },
+          {
+            "element": "middle panel of three",
+            "role": "indicates chronology: this representation of the square is the second state of 3, and depicts it in the process of rotation."
+          }
+        ],
+        "is_core_focus": true,
+        "refinements": [
+        ]
+      },
+      {
+        "name": "Result",
+        "description": "The result of the rotation is a square rotated anticlockwise.",
+        "elements": [
+          {
+            "element": "the rotated square (a diamond)",
+            "role": "Establishes the result of the transformation."
+          },
+          {
+            "element": "right panel of three",
+            "role": "indicates chronology: this representation of the final state of the square is the last state of 3, and depicts it as having been rotated."
+          }
+        ],
+        "refinements": [
+        ]
+      }
+    ]
+  }
+]

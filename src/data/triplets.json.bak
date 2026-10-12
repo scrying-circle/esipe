@@ -1,0 +1,106 @@
+[
+  {
+    "id": "projection",
+    "key_idea": "Shows the projection of a cube onto the y-z plane",
+    "description": "PLACEHOLDER - please provide your best evaluation based on their explanation",
+    "key_elements": [
+      { "element": "cube", "role": "original object to be projected" },
+      { "element": "shaded square on the y-z plane", "role": "this is the resultant shape of the projection/flattening of the cube onto the y-z plane" }
+    ],
+    "contextual_elements": [
+      { "element": "set of 3D axes", "role": "provides a clear indication of the orientation of the cube in 3D space, as well as the plane it lands on (the y-z plane)"},
+      { "element": "three arrows", "role": "these indicate projection by mapping vertices of the cube to vertices on the resultant projected shape" }
+    ],
+    "sketchUrl": "/sketches/projection.jpg"
+  },
+  {
+    "id": "cube-folding",
+    "key_idea": "Demonstrates the folding of a cube net, using two labels to keep track of its orientation",
+    "key_elements": [
+      { "element": "cube net", "role": "the characteristic shape of an unfolded cube, made up of 6 squares in a lowercase t shape, but rotated, so the long base of the t is pointing right"},
+      { "element": "square label", "role": "placed on the square on one arm of the t, it is a reference marker that is present in the depiction of the folded cube"},
+      { "element": "arrow label", "role": "placed on the square at the base of the t pointing right, it is a reference marker that is present in the depiction of the folded cube that also contains left-right information"},
+      { "element": "folded cube", "role": "a depiction of the net after being folded, including the reference labels from the net"}
+    ],
+    "contextual_elements": [
+      { "element": "arrow from net to folded cube", "role": "indicates the relationship between these two scenes being a kind of transformation, which, given the shapes, should be assumed to be folding"}
+    ],
+    "sketchUrl": "/sketches/cube-folding.jpg"
+  },
+  {
+    "id": "sample",
+    "key_idea": "Rays can intersect a circle at zero, one, or two points.",
+    "description": "There are three rays, annotated with cases 1 through 3, and a circle. The case 1 ray does not intersect the circle, the case 2 ray is tangent to the circle at one point, and the case 3 ray intersects the circle at two points. The intersection points are explicitly highlighted and act as the dependent variable over each of the 3 cases, implying they are the focus of this exercise.",
+    "sketchUrl": "/sketches/sphere-ray-intersection.jpg"
+  },
+  {
+    "id": "zoom",
+    "key_idea": "The effect of moving the observer away from the view plane is that the field/angle of view narrows or, put differently, the scene becomes more zoomed in",
+    "description": "PLACEHOLDER - please provide your best evaluation based on their explanation",
+    "key_elements": [
+      { "element": "initial observer", "role": "this represents the initial position of the observer" },
+      { "element": "secondary observer", "role": "this represents the second position of the observer, further from the view plane than the initial observer" },
+      { "element": "dotted lines from the initial observer through the view plane onto the tree", "role": "this represents the initial view of the tree by the observer.The dotted nature also hints that this is a transient state." },
+      { "element": "solid lines from the secondary observer through the view plane onto the tree", "role": "this represents the second view of the tree by the observer, and notably the view angle is narrower due to the view plane constraint" },
+      { "element": "square with label 'view plane'", "role": "this is the view plane, limiting the vision through which the observers view the tree" },
+      { "element": "tree", "role": "this is the object being viewed by the observers, and is a generic stand-in for any scene. Its basic nature implies that the author of the sketch is not concerned with the specifics of the scene in this case." }
+    ],
+    "contextual_elements": [
+      { "element": "arrow from initial observer to secondary observer", "role": "presents the intention that we are looking at the difference between the two states due to moving the observer away from the view plane" }
+    ],
+    "sketchUrl": "/sketches/zoom.jpg"
+  },
+  {
+    "id": "shadow",
+    "key_idea": "a shadow ray from a point not in shadow to the light source does not intersect any objects, while one from a point in shadow does intersect an object",
+    "description": "PLACEHOLDER - please provide your best evaluation based on their explanation",
+    "key_elements": [
+      { "element": "points labelled p1 and p2", "role": "these points represent the different cases of being in shadow and not in shadow" },
+      { "element": "lightbulb-styled light source", "role": "the light source which casts the shadow" },
+      { "element": "circle", "role": "casts a shadow due to the light source. This also means the shadow ray cast by p2 to the light source intersects this circle." },
+      { "element": "shadow rays, or rays from the points p1 and p2 to the light source", "role": "whether these rays are blocked by objects on the way to the light source determines whether the point is in shadow or not" },
+      { "element": "bolded intersection point between the circle and the shadow ray cast by p2", "role": "this draws importance to the fact that this shadow ray has an intersection point with an object, implying this intersection is a key concept in the sketch"}
+    ],
+    "contextual_elements": [
+      { "element": "observer", "role": "provides a viewer to make the decision of in shadow or not meaningful" },
+      { "element": "line representing a flat ground", "role": "Provides a surface for the observer to be looking at, justifying computation of shadows at the two points"},
+      { "element": "light/shaded-shadow cone around the circle", "role": "clearly shows this sketch concerns shadows, and that p2 resides in the shadow zone by the circle, so we would expect results that correlate with that fact"},
+      { "element": "primary rays to p1 and p2 from the observer", "role": "emphasise that these points are being viewed, making the decision of whether the points are in shadow or not meaningful"}
+    ],
+    "sketchUrl": "/sketches/shadow.jpg"
+  },
+  {
+    "id": "planar distance",
+    "key_idea": "the distance from a point to a plane can be computed by finding the magnitude of the projection of the vector from the origin to the point onto the plane's normal, and comparing it with the distance of the plane to the origin along that normal",
+    "description": "PLACEHOLDER - please provide your best evaluation based on their explanation",
+    "key_elements": [
+      { "element": "point p, depicted as a dot with a line drawn to it from the origin", "role": "represents both the point and the vector from the origin to that point" },
+      { "element": "distance d", "role": "the double underline under the d hints that this is the central concept of the sketch. It is the distance from the plane to the point p via the vector normal n to the plane."},
+      { "element": "labelled plane", "role": "represents a flat plane in 3D space" },
+      { "element": "labelled origin", "role": "functions as the reference point for the the point p and the plane" },
+      { "element": "vector n perpedicular from the plane's surface", "role": "the normal vector of the plane. used to compute the perpedicular distance of the point from the origin and comparing this with distance d'"},
+      { "element": "distance d'", "role": "It is the perpendicular distance from the origin to the plane."},
+      { "element": "dotted line from an unspecified point to p that forms a right angle with the origin (which is labelled with dotted lines and a square angle label) and goes through n", "role": "is labelled as the projection of p onto n, and is the key quantity we need to compute and compare with d' to find d"}
+    ],
+    "contextual_elements": [
+      { "element": "small vector perpendicular to the plane along distance d'", "role": "clearly indicates that d' is a perpendicular distance" },
+      { "element": "dotted line across the center of the plane", "role": "keeps everything in the sketch coplanar for ease of understanding"}
+    ],
+    "sketchUrl": "/sketches/distance-to-plane.jpg"
+  },
+  {
+    "id": "csg",
+    "key_idea": "in a ray intersecting the csg object, the ray intersects the box before it leaves the circle, and in a ray not intersecting the csg object, the ray leaves the circle before entering the box",
+    "description": "PLACEHOLDER - please provide your best evaluation based on their explanation",
+    "key_elements": [
+      { "element": "a rectangle labelled box b and circle labelled circle c, with the intersection between them heavily shaded", "role": "the shaded area represents the CSG object, and the circle and box are the primary components" },
+      { "element": "a ray r1 passing through the shaded area", "role": "represents a ray that intersects the CSG object" },
+      { "element": "a ray r2 that passes through the circle and the box, but not the intersection", "role": "represents a ray that does not intersect the CSG object but intersects the primary components of the csg" },
+      { "element": "labelled intersection points S# (where S is the initial for the shape, c or b, and # is the number of times that shape has been intersected with by the ray, 1 or 2. both rays use this scheme) each time any ray passes through any edge", "role": "provides an ordered list of points on the primaries each ray goes through we can compare" },
+      { "element": "explicit list of points derived from intersection by the ray, one list for each ray r1 and r2", "role": "easy to compare and contrast the order of point intersections. we can see that because r2 sees the outer edge of the circle before entering the box, it doesnt hit the intersection region" }
+    ],
+    "contextual_elements": [
+    ],
+    "sketchUrl": "/sketches/csg-intersection.jpg"
+  }
+]

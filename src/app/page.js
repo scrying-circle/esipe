@@ -1,69 +1,193 @@
-import Image from "next/image";
+"use client";
+
+import { useState, useEffect, useMemo } from 'react';
+import triplets from '@/data/triplets.json';
+import { getOrderedTriplets } from '@/lib/taskOrder';
+
+import LoginPhase from '@/components/LoginPhase';
+import InstructionsPhase from '@/components/InstructionsPhase';
+import TaskPhase from '@/components/TaskPhase';
+import FeedbackPhase from '@/components/FeedbackPhase';
+import CompletePhase from '@/components/CompletePhase';
 
 export default function Home() {
+  const [studentId, setStudentId] = useState('');
+  const [completedTriplets, setCompletedTriplets] = useState([]);
+  
+  // Phase can be: 'login', 'instructions', 'task', 'complete'
+  const [phase, setPhase] = useState('login');
+  const [feedbackData, setFeedbackData] = useState(null);
+  const [trayOpen, setTrayOpen] = useState(false);
+  const [trayTab, setTrayTab] = useState('instructions');
+
+  const allTaskTriplets = useMemo(() => {
+    return getOrderedTriplets(triplets, studentId);
+  }, [studentId]);
+
+  const remainingTriplets = allTaskTriplets.filter(t => !completedTriplets.includes(t.id));
+  
+  const currentTriplet = remainingTriplets.length > 0 ? remainingTriplets[0] : null;
+  const isLastTask = remainingTriplets.length <= 1;
+
+  useEffect(() => {
+    const handleBeforeUnload = (e) => {
+      if (phase !== 'login' && phase !== 'complete') {
+        e.preventDefault();
+        e.returnValue = '';
+      }
+    };
+    window.addEventListener('beforeunload', handleBeforeUnload);
+    return () => window.removeEventListener('beforeunload', handleBeforeUnload);
+  }, [phase]);
+
+  const handleLogin = (fetchedCompleted = []) => {
+    setCompletedTriplets(fetchedCompleted);
+    
+    const ordered = getOrderedTriplets(triplets, studentId);
+    const remaining = ordered.filter(t => !fetchedCompleted.includes(t.id));
+    
+    if (remaining.length === 0) {
+      setPhase('complete');
+    } else if (fetchedCompleted.length > 0) {
+      setPhase('task');
+    } else {
+      setPhase('instructions');
+    }
+  };
+
+  const handleStartTasks = () => {
+    setPhase('task');
+  };
+
+  const handleTaskComplete = (data) => {
+    setFeedbackData(data);
+    setTrayTab('feedback');
+    setTrayOpen(true);
+  };
+
+  const handleNextTask = async (results) => {
+    const currentId = currentTriplet.id;
+    // Save the records to our Prisma database
+    try {
+      const res = await fetch('/api/save', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          studentId,
+          tripletId: currentTriplet.id,
+          studentDescription: feedbackData.studentDescription,
+          writingTimeMs: feedbackData.writingTimeMs || null,
+          evaluations: results
+        })
+      });
+      if (!res.ok) {
+        const errData = await res.json().catch(() => ({}));
+        console.error("Failed to save evaluation to database:", errData);
+        alert("Warning: Could not save evaluation to database. Please check console or connection.");
+      }
+    } catch (error) {
+      console.error("Failed to save evaluation to database:", error);
+    }
+
+    setCompletedTriplets(prev => [...prev, currentId]);
+
+    if (!isLastTask) {
+      setFeedbackData(null);
+      setTrayTab('instructions');
+      setTrayOpen(false);
+    } else {
+      setPhase('complete');
+    }
+  };
+
+  const handleRestart = () => {
+    window.location.reload();
+  };
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <main className={phase === 'task' ? '' : 'app-container'}>
+      {phase === 'login' && (
+        <LoginPhase 
+          studentId={studentId} 
+          setStudentId={setStudentId} 
+          onLogin={handleLogin} 
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.js
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+      )}
+
+      {phase === 'instructions' && (
+        <InstructionsPhase 
+          onStartTasks={handleStartTasks} 
+        />
+      )}
+
+      {phase === 'task' && currentTriplet && (
+        <div className="workspace">
+          <div className="workspace-main">
+            {!trayOpen && (
+              <button className="tray-toggle" onClick={() => setTrayOpen(true)}>
+                ☰ Instructions
+              </button>
+            )}
+            <div className="app-container">
+              <TaskPhase 
+                key={currentTriplet.id}
+                currentTriplet={currentTriplet}
+                currentTaskIndex={completedTriplets.length}
+                totalTasks={allTaskTriplets.length}
+                onTaskComplete={handleTaskComplete}
+                initialData={feedbackData}
+                isLocked={!!feedbackData}
+              />
+            </div>
+          </div>
+          <div className={`workspace-tray ${trayOpen ? 'open' : ''}`}>
+             <div style={{ padding: '1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
+               <h3 style={{ margin: 0, fontSize: '1.2rem' }}>Reference</h3>
+               <button onClick={() => setTrayOpen(false)} style={{ background: 'transparent', border: 'none', color: '#cbd5e1', cursor: 'pointer', fontSize: '1.5rem', lineHeight: 1 }}>×</button>
+             </div>
+             <div className="tray-tabs">
+                <button className={`tray-tab ${trayTab === 'instructions' ? 'active' : ''}`} onClick={() => setTrayTab('instructions')}>Instructions</button>
+                <button className={`tray-tab ${trayTab === 'feedback' ? 'active' : ''}`} onClick={() => setTrayTab('feedback')} disabled={!feedbackData}>Feedback</button>
+             </div>
+             <div className="tray-content">
+                {trayTab === 'instructions' && (
+                  <div style={{ fontSize: '0.95rem', lineHeight: '1.6' }}>
+                    <p>For each sketch, there are 2 steps:</p>
+                    <p>
+                      <strong>1. Explain the sketch:</strong> Write a short, English-language description of the sketch, focusing on the high-level concept(s). While referring to visual elements is perfectly acceptable, do not give an element-by-element description of the sketch.
+                    </p>
+                    <p>
+                      <strong>2. Rate AI feedback:</strong> After submitting your explanation, you will receive three
+                      different AI-generated feedback responses. Rate each on how helpful you find it.
+                    </p>
+                    <p style={{ color: '#fbbf24', fontStyle: 'italic' }}>
+                      Aim for about 2–3 minutes explaining, and 1–2 minutes examining and rating feedback.
+                    </p>
+                  </div>
+                )}
+                {trayTab === 'feedback' && (
+                  feedbackData ? (
+                    <FeedbackPhase 
+                      feedbackData={feedbackData}
+                      isLastTask={isLastTask}
+                      onNextTask={handleNextTask}
+                      studentId={studentId}
+                    />
+                  ) : (
+                    <p style={{ padding: '1rem', color: '#94a3b8' }}>Submit your explanation to receive feedback.</p>
+                  )
+                )}
+             </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      )}
+
+      {phase === 'complete' && (
+        <CompletePhase 
+          studentId={studentId}
+          onRestart={handleRestart}
+        />
+      )}
+    </main>
   );
 }
