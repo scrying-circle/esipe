@@ -38,6 +38,8 @@ export default function FeedbackPhase({ feedbackData, isLastTask, onNextTask, on
   const [ratings, setRatings] = useState({});
   const [hoverRatings, setHoverRatings] = useState({});
   const [tiebreakers, setTiebreakers] = useState({});
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const isTransitioningRef = useRef(false);
   const abortControllerRef = useRef(null);
   
   useEffect(() => {
@@ -162,6 +164,11 @@ export default function FeedbackPhase({ feedbackData, isLastTask, onNextTask, on
   }, [ratings]);
 
   const handleNext = () => {
+    if (!canProceed || isTransitioningRef.current) return;
+
+    isTransitioningRef.current = true;
+    setIsTransitioning(true);
+
     const results = evaluations.map(ev => {
       const rating = ratings[ev.uiId];
       const isWinner = tiedGroups.some(g => g.rating === rating && tiebreakers[rating] === ev.uiId);
@@ -334,11 +341,13 @@ export default function FeedbackPhase({ feedbackData, isLastTask, onNextTask, on
       <div style={{ marginTop: '3rem', textAlign: 'center' }}>
         <button 
           onClick={handleNext} 
-          className="btn" 
-          disabled={!canProceed}
+          className={`btn${isTransitioning ? ' btn-loading' : ''}`}
+          disabled={!canProceed || isTransitioning}
+          aria-busy={isTransitioning}
           style={{ width: '100%', maxWidth: '300px' }}
         >
-          {!isLastTask ? 'Next Sketch' : 'Finish Session'}
+          {isTransitioning && <span className="spinner" aria-hidden="true" />}
+          {isTransitioning ? 'Saving...' : !isLastTask ? 'Next Sketch' : 'Finish Session'}
         </button>
       </div>
     </div>

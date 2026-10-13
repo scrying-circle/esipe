@@ -153,6 +153,15 @@ textarea {
   transform: none;
 }
 
+.btn-loading:disabled {
+  gap: 0.6rem;
+  background: #64748b;
+  color: #e2e8f0;
+  opacity: 1;
+  cursor: wait;
+  box-shadow: none;
+}
+
 /* Sketch Image */
 .sketch-container {
   width: 100%;
