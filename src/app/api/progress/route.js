@@ -12,15 +12,22 @@ export async function GET(request) {
       return NextResponse.json({ error: 'Missing studentId' }, { status: 400 });
     }
 
-    const evaluations = await prisma.evaluation.findMany({
-      where: {
-        studentId: studentId
-      },
-      select: {
-        tripletId: true
-      },
-      distinct: ['tripletId']
-    });
+    const queryTimer = `progress-query-${Date.now()}-${Math.random()}`;
+    console.time(queryTimer);
+    let evaluations;
+    try {
+      evaluations = await prisma.evaluation.findMany({
+        where: {
+          studentId: studentId
+        },
+        select: {
+          tripletId: true
+        },
+        distinct: ['tripletId']
+      });
+    } finally {
+      console.timeEnd(queryTimer);
+    }
 
     const completedTriplets = evaluations.map(e => e.tripletId);
 
