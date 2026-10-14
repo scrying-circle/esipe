@@ -3,7 +3,6 @@ import { useState } from 'react';
 
 export default function LoginPhase({ studentId, setStudentId, onLogin }) {
   const [isLoading, setIsLoading] = useState(false);
-
   const handleLogin = async (e) => {
     e.preventDefault();
     if (studentId.trim().length > 0) {
