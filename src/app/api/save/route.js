@@ -11,24 +11,31 @@ export async function POST(request) {
     // { conditionId, modelName, aiGrade, aiFeedback, studentRating, isTiebreakerWinner, waitMs }
     const { studentId, tripletId, studentDescription, writingTimeMs, evaluations } = data;
 
-    const savedEvaluations = await prisma.evaluation.createManyAndReturn({
-      data: evaluations.map((ev) => ({
-        studentId,
-        tripletId,
-        studentDescription,
-        studentPromptGuess: '',
-        conditionId: ev.conditionId,
-        modelName: ev.modelName,
-        aiGrade: ev.aiGrade,
-        aiFeedback: ev.aiFeedback,
-        studentRating: ev.studentRating,
-        isTiebreakerWinner: ev.isTiebreakerWinner || false,
-        waitMs: ev.waitMs,
-        writingTimeMs: writingTimeMs ? Math.round(writingTimeMs) : null,
-        extraction: ev.extraction || null,
-        classification: ev.classification || null
-      }))
-    });
+    const queryTimer = `save-query-${Date.now()}-${Math.random()}`;
+    console.time(queryTimer);
+    let savedEvaluations;
+    try {
+      savedEvaluations = await prisma.evaluation.createManyAndReturn({
+        data: evaluations.map((ev) => ({
+          studentId,
+          tripletId,
+          studentDescription,
+          studentPromptGuess: '',
+          conditionId: ev.conditionId,
+          modelName: ev.modelName,
+          aiGrade: ev.aiGrade,
+          aiFeedback: ev.aiFeedback,
+          studentRating: ev.studentRating,
+          isTiebreakerWinner: ev.isTiebreakerWinner || false,
+          waitMs: ev.waitMs,
+          writingTimeMs: writingTimeMs ? Math.round(writingTimeMs) : null,
+          extraction: ev.extraction || null,
+          classification: ev.classification || null
+        }))
+      });
+    } finally {
+      console.timeEnd(queryTimer);
+    }
 
     return NextResponse.json({ success: true, savedEvaluations });
   } catch (error) {
