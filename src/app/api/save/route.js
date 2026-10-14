@@ -31,7 +31,8 @@ export async function POST(request) {
             classification: ev.classification || null
           }
         })
-      )
+      ),
+      { maxWait: 10_000 }
     );
 
     return NextResponse.json({ success: true, savedEvaluations });
