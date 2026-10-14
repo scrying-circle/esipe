@@ -7,7 +7,7 @@ const globalForPrisma = globalThis;
 if (!globalForPrisma.prisma) {
   const connectionString = process.env.DATABASE_URL;
   if (connectionString) {
-    const pool = new Pool({ connectionString });
+    const pool = new Pool({ connectionString, max: 1 });
     const adapter = new PrismaPg(pool);
     globalForPrisma.prisma = new PrismaClient({ adapter });
   } else {
